@@ -150,7 +150,7 @@ polar_emotions ={
 
 epsilon = 1e-8
 
-polar_regions = {
+POLAR_REGIONS = {
     '1':{
         'radius':{
             'min':0.85,
@@ -159,8 +159,9 @@ polar_regions = {
         'angle':{
             'min':90,
             'max':95.45
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '2':{
         'radius':{
             'min':0,
@@ -169,8 +170,9 @@ polar_regions = {
         'angle':{
             'min':90,
             'max':95.45
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '3':{
         'radius':{
             'min':0,
@@ -179,8 +181,9 @@ polar_regions = {
         'angle':{
             'min':95.45,
             'max':110.05
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '4':{
         'radius':{
             'min':np.sqrt(.7)+epsilon,
@@ -189,8 +192,9 @@ polar_regions = {
         'angle':{
             'min':95.45,
             'max':110.05
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '5':{
         'radius':{
             'min':0,
@@ -199,8 +203,9 @@ polar_regions = {
         'angle':{
             'min':110.05,
             'max':125.53
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '6':{
         'radius':{
             'min':0.7,
@@ -209,8 +214,9 @@ polar_regions = {
         'angle':{
             'min':110.05,
             'max':125.53
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '7':{
         'radius':{
             'min':np.sqrt(0.7),
@@ -219,8 +225,9 @@ polar_regions = {
         'angle':{
             'min':110.05,
             'max':125.53
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '8':{
         'radius':{
             'min':0,
@@ -229,8 +236,9 @@ polar_regions = {
         'angle':{
             'min':125.53,
             'max':135
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '9':{
         'radius':{
             'min':0,
@@ -239,8 +247,9 @@ polar_regions = {
         'angle':{
             'min':135,
             'max':149.88
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '10':{
         'radius':{
             'min':0.16,
@@ -249,8 +258,9 @@ polar_regions = {
         'angle':{
             'min':135,
             'max':149.88
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '11':{
         'radius':{
             'min':0.8+epsilon,
@@ -259,8 +269,9 @@ polar_regions = {
         'angle':{
             'min':135,
             'max':149.88
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '12':{
         'radius':{
             'min':np.sqrt(0.75),
@@ -269,8 +280,9 @@ polar_regions = {
         'angle':{
             'min':135,
             'max':149.88
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '13':{
         'radius':{
             'min':0,
@@ -279,8 +291,9 @@ polar_regions = {
         'angle':{
             'min':149.88,
             'max':163.3
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '14':{
         'radius':{
             'min':0.7,
@@ -289,8 +302,9 @@ polar_regions = {
         'angle':{
             'min':149.88,
             'max':163.3
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '15':{
         'radius':{
             'min':np.sqrt(0.75)+epsilon,
@@ -299,8 +313,9 @@ polar_regions = {
         'angle':{
             'min':149.88,
             'max':163.3
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '16':{
         'radius':{
             'min':0,
@@ -309,8 +324,9 @@ polar_regions = {
         'angle':{
             'min':163.3,
             'max':180
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '17':{
         'radius':{
             'min':0,
@@ -319,8 +335,9 @@ polar_regions = {
         'angle':{
             'min':180,
             'max':206.56
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '18':{
         'radius':{
             'min':0,
@@ -329,8 +346,9 @@ polar_regions = {
         'angle':{
             'min':206.56,
             'max':213.82
-        }
         },
+        'color': '#ffd166'
+     },
     '19':{
         'radius':{
             'min':0.89,
@@ -340,8 +358,9 @@ polar_regions = {
             'min':206.56,
             'max':213.82
 
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '20':{
         'radius':{
             'min':0,
@@ -350,8 +369,9 @@ polar_regions = {
         'angle':{
             'min':213.82,
             'max':225
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '21':{
         'radius':{
             'min':0,
@@ -360,8 +380,9 @@ polar_regions = {
         'angle':{
             'min':225,
             'max':244.43
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '22':{
         'radius':{
             'min':0.6,
@@ -370,8 +391,9 @@ polar_regions = {
         'angle':{
             'min':225,
             'max':244.43
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '23':{
         'radius':{
             'min':0.74+epsilon,
@@ -380,8 +402,9 @@ polar_regions = {
         'angle':{
             'min':225,
             'max':244.43
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '24':{
         'radius':{
             'min':1+epsilon,
@@ -390,8 +413,9 @@ polar_regions = {
         'angle':{
             'min':225,
             'max':230.6
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '25':{
         'radius':{
             'min':0,
@@ -400,8 +424,9 @@ polar_regions = {
         'angle':{
             'min':244.43,
             'max':256.34
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '26':{
         'radius':{
             'min':0.6,
@@ -410,8 +435,9 @@ polar_regions = {
         'angle':{
             'min':244.43,
             'max':256.34
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '27':{
         'radius':{
             'min':0.83+epsilon,
@@ -420,8 +446,9 @@ polar_regions = {
         'angle':{
             'min':244.43,
             'max':256.34
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '29':{
         'radius':{
             'min':0,
@@ -430,8 +457,9 @@ polar_regions = {
         'angle':{
             'min':256.34,
             'max':270
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '30':{
         'radius':{
             'min':0.3,
@@ -440,8 +468,9 @@ polar_regions = {
         'angle':{
             'min':256.34,
             'max':270
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '31':{
         'radius':{
             'min':0.4+epsilon,
@@ -450,8 +479,9 @@ polar_regions = {
         'angle':{
             'min':256.34,
             'max':270
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '32':{
         'radius':{
             'min':0,
@@ -460,8 +490,9 @@ polar_regions = {
         'angle':{
             'min':270,
             'max':309.4
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '33':{
         'radius':{
                 'min':0,
@@ -470,8 +501,9 @@ polar_regions = {
         'angle':{
                 'min':309.44,
                 'max':320.31
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '34':{
         'radius':{
                 'min':np.sqrt(0.87),
@@ -480,8 +512,9 @@ polar_regions = {
         'angle':{
                 'min':309.44,
                 'max':320.31
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '35':{
         'radius':{
                 'min':0,
@@ -490,8 +523,9 @@ polar_regions = {
         'angle':{
                 'min':320.31,
                 'max':344.43
-        }
-    },
+        },
+        'color': '#ffd166'
+     },
     '36':{
         'radius':{
                     'min':0,
@@ -500,8 +534,9 @@ polar_regions = {
             'angle':{
                     'min':344.43,
                     'max':360
-            }
-    },
+            },
+        'color': '#ffd166'
+     },
     '37':{
         'radius':{
                     'min':0.35,
@@ -510,8 +545,9 @@ polar_regions = {
             'angle':{
                     'min':344.43,
                     'max':360
-            }
-    },
+            },
+        'color': '#ffd166'
+     },
     '38':{
         'radius':{
                     'min':0.45,
@@ -520,8 +556,9 @@ polar_regions = {
             'angle':{
                     'min':344.43,
                     'max':360
-            }
-    },
+            },
+        'color': '#ffd166'
+     },
     '39':{
         'radius':{
                     'min':0,
@@ -530,8 +567,9 @@ polar_regions = {
             'angle':{
                     'min':0,
                     'max':90
-            }
-    }
+            },
+        'color': '#ffd166'
+     }
 }
 
 def normalize(coordinates: tuple)->tuple:
