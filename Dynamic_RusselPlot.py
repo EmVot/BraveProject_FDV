@@ -81,7 +81,7 @@ class CircumplexPlotter:
         self.ax.set_title('Circumplex Model', fontsize=16, fontweight='bold', pad=60)
     
     def add_point(self, r, theta, label, point_color='black', point_size=50, 
-                  label_color='gray', label_size=9, label_offset=0.05):
+                  label_color='gray', label_size=9, label_offset=0.05, is_polar=True):
         """
         Add a point with the a label to the plot, using polar coordinates.
         
@@ -100,15 +100,18 @@ class CircumplexPlotter:
         """
         # if not (0 <= r <= 1):
         #     raise ValueError("Radius must be: 0 <= r <= 1")
+        if is_polar:
+            theta_rad = np.radians(theta)
+            x = r * np.cos(theta_rad)
+            y = r * np.sin(theta_rad)
+        else:
+            x = r
+            y = theta
         
-        theta_rad = np.radians(theta)
-        x = r * np.cos(theta_rad)
-        y = r * np.sin(theta_rad)
+        self.ax.scatter(x, y, c=point_color, s=point_size, zorder=5)
         
-        self.ax.scatter(x, y, c=point_color, s=point_size, zorder=5, alpha=0.8)
-        
-        label_x = (r + label_offset) * np.cos(theta_rad)
-        label_y = (r + label_offset) * np.sin(theta_rad)
+        label_x = (x + label_offset) 
+        label_y = (y + label_offset)
         
         self.ax.text(label_x, label_y, label, 
                     fontsize=label_size, color=label_color,
@@ -129,7 +132,7 @@ class CircumplexPlotter:
         
         return point_info
     
-    def add_region(self, r_inner, r_outer, theta_start, theta_end, color='blue', alpha=0.6, label=None):
+    def add_region(self, r_inner, r_outer, theta_start, theta_end, color='blue', alpha=0.8, label=None, include_label=False):
         """
         Add a region (slice of circular crown) to the plot.
         
@@ -160,20 +163,25 @@ class CircumplexPlotter:
         x_points = np.concatenate([x_outer, x_inner])
         y_points = np.concatenate([y_outer, y_inner])
         
-        polygon = patches.Polygon(list(zip(x_points, y_points)), 
+        if color == '#ffd166':
+            polygon = patches.Polygon(list(zip(x_points, y_points)), 
+                                closed=True, fill=False,
+                                edgecolor='black', linewidth=1)
+        else:
+            polygon = patches.Polygon(list(zip(x_points, y_points)), 
                                 closed=True, facecolor=color, alpha=alpha, 
                                 edgecolor='black', linewidth=1)
         self.ax.add_patch(polygon)
         
-        if label:
+        if label and include_label:
             theta_mid = (theta_start_rad + theta_end_rad) / 2
             r_mid = (r_inner + r_outer) / 2
             x_label = r_mid * np.cos(theta_mid)
             y_label = r_mid * np.sin(theta_mid)
             
             self.ax.text(x_label, y_label, label, ha='center', va='center', 
-                        fontsize=10, fontweight='bold', 
-                        bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.8))
+                        fontsize=7, fontweight='bold', 
+                        bbox=dict(boxstyle='round,pad=0.1', facecolor='white', alpha=0.8))
         
         region_info = {
             'radius': {
@@ -233,7 +241,7 @@ class RusselPlotAnimator:
         self.fig_width = width / dpi
         self.fig_height = height / dpi
         
-        self.waypoints: List[Tuple[float, float]] = []
+        self.waypoints = []
         if polar_regions is None:
             polar_regions = POLAR_REGIONS
         self.setup_russel_plot(figsize=(self.fig_width, self.fig_height), polar_regions=polar_regions)
@@ -261,14 +269,47 @@ class RusselPlotAnimator:
 
         #circumplex.show_or_save(action='show')
         
-    def add_waypoint(self, x: float, y: float):
-        """Aggiunge un punto di controllo alla traiettoria."""
-        self.waypoints.append((x, y))
-        
-    def add_waypoints(self, points: List[Tuple[float, float]]):
+    def add_waypoints(self, points):
         """Aggiunge multipli punti di controllo."""
         self.waypoints.extend(points)
         
+    # def _interpolate_trajectory(self, duration_per_segment: float = 1.0) -> Tuple[np.ndarray, np.ndarray]:
+    #     """
+    #     Interpola la traiettoria tra tutti i waypoints.
+        
+    #     Args:
+    #         duration_per_segment: Durata in secondi per ogni segmento
+            
+    #     Returns:
+    #         Tuple di array numpy (x_coords, y_coords) interpolati
+    #     """
+    #     if len(self.waypoints) < 2:
+    #         raise ValueError("Servono almeno 2 waypoints per creare una traiettoria")
+            
+    #     total_segments = len(self.waypoints) - 1
+    #     total_frames = int(total_segments * duration_per_segment * self.fps)
+        
+    #     t_waypoints = np.linspace(0, total_segments, len(self.waypoints))
+        
+    #     x_waypoints = np.array([wp['position'][0] for wp in self.waypoints])
+    #     y_waypoints = np.array([wp['position'][1] for wp in self.waypoints])
+        
+    #     if len(self.waypoints) == 2:
+    #         # Interpolazione lineare per 2 punti
+    #         t_interp = np.linspace(0, 1, total_frames)
+    #         x_interp = x_waypoints[0] + t_interp * (x_waypoints[1] - x_waypoints[0])
+    #         y_interp = y_waypoints[0] + t_interp * (y_waypoints[1] - y_waypoints[0])
+    #     else:
+    #         # Interpolazione spline per più punti
+    #         f_x = interp1d(t_waypoints, x_waypoints, kind='cubic')
+    #         f_y = interp1d(t_waypoints, y_waypoints, kind='cubic')
+            
+    #         t_interp = np.linspace(0, total_segments, total_frames)
+    #         x_interp = f_x(t_interp)
+    #         y_interp = f_y(t_interp)
+            
+    #     return x_interp, y_interp
+
     def _interpolate_trajectory(self, duration_per_segment: float = 1.0) -> Tuple[np.ndarray, np.ndarray]:
         """
         Interpola la traiettoria tra tutti i waypoints.
@@ -282,29 +323,43 @@ class RusselPlotAnimator:
         if len(self.waypoints) < 2:
             raise ValueError("Servono almeno 2 waypoints per creare una traiettoria")
             
-        total_segments = len(self.waypoints) - 1
-        total_frames = int(total_segments * duration_per_segment * self.fps)
+        # Calcola il numero di frame per segmento
+        frames_per_segment = int(duration_per_segment * self.fps)
         
-        t_waypoints = np.linspace(0, total_segments, len(self.waypoints))
+        # Array per raccogliere tutti i punti interpolati
+        x_coords = []
+        y_coords = []
         
-        x_waypoints = np.array([wp[0] for wp in self.waypoints])
-        y_waypoints = np.array([wp[1] for wp in self.waypoints])
-        
-        if len(self.waypoints) == 2:
-            # Interpolazione lineare per 2 punti
-            t_interp = np.linspace(0, 1, total_frames)
-            x_interp = x_waypoints[0] + t_interp * (x_waypoints[1] - x_waypoints[0])
-            y_interp = y_waypoints[0] + t_interp * (y_waypoints[1] - y_waypoints[0])
-        else:
-            # Interpolazione spline per più punti
-            f_x = interp1d(t_waypoints, x_waypoints, kind='cubic')
-            f_y = interp1d(t_waypoints, y_waypoints, kind='cubic')
+        # Interpola ogni segmento separatamente
+        for i in range(len(self.waypoints)-1):
+            start_wp = self.waypoints[i]['position']
+            end_wp = self.waypoints[i + 1]['position']
             
-            t_interp = np.linspace(0, total_segments, total_frames)
-            x_interp = f_x(t_interp)
-            y_interp = f_y(t_interp)
+            # Per l'ultimo segmento, includi anche il punto finale
+            # Per gli altri segmenti, escludi il punto finale per evitare duplicati
+            if i == len(self.waypoints) - 2:  # ultimo segmento
+                t_segment = np.linspace(0, 1, frames_per_segment + 1)
+                include_end = True
+            else:
+                t_segment = np.linspace(0, 1, frames_per_segment + 1)[:-1]  # escludi ultimo punto
+                include_end = False
             
-        return x_interp, y_interp
+            # Interpolazione lineare semplice per ogni segmento
+            x_segment = start_wp[0] + t_segment * (end_wp[0] - start_wp[0])
+            y_segment = start_wp[1] + t_segment * (end_wp[1] - start_wp[1])
+
+            x_coords.extend([start_wp[0] for _ in range(14)])
+            y_coords.extend([start_wp[1] for _ in range(14)])
+
+            x_coords.extend(x_segment)
+            y_coords.extend(y_segment)
+            # Aggiungi il punto finale se necessario
+            if include_end:
+                x_coords.extend([end_wp[0] for _ in range(15)])
+                y_coords.extend([end_wp[1] for _ in range(15)])
+        print(f"Interpolated {len(x_coords)} points in total")
+       
+        return x_coords, y_coords
    
     def create_frame_based_video(self, duration_per_segment: float = 1.0,
                                 trail_mode: TrailMode = TrailMode.FIXED_LENGTH,
@@ -326,12 +381,17 @@ class RusselPlotAnimator:
         """
         
         os.makedirs(temp_dir, exist_ok=True)
-        
+        label_offset = 0.08
         # Interpola la traiettoria
         x_coords, y_coords = self._interpolate_trajectory(duration_per_segment)
-                
+        x_waypoints = [wp['position'][0] for wp in self.waypoints]
+        y_waypoints = [wp['position'][1] for wp in self.waypoints]
+        idx = 0
+        
+     
         # Genera frame
         for frame_idx in range(len(x_coords)): 
+            
             self.ax.clear()
             self.setup_russel_plot(figsize=(self.fig_width, self.fig_height), polar_regions=self.regions)       
             current_x, current_y = x_coords[frame_idx], y_coords[frame_idx]
@@ -345,7 +405,7 @@ class RusselPlotAnimator:
                 if frame_idx > 0:
                     trail_x = x_coords[:frame_idx+1]
                     trail_y = y_coords[:frame_idx+1]
-                    self.ax.plot(trail_x, trail_y, 'r-', linewidth=2, label='Trail')
+                    self.ax.plot(trail_x, trail_y, '#B771E5', linewidth=4, label='Trail')
             
             elif trail_mode == TrailMode.FIXED_LENGTH:
                 # Modalità 2: Scia di lunghezza fissa
@@ -357,7 +417,19 @@ class RusselPlotAnimator:
             
             
             # Punto corrente
-            self.ax.plot(current_x, current_y, 'ro', markersize=10, label='Current Position')
+            if current_x == x_waypoints[idx//15] and current_y == y_waypoints[idx//15]:
+                
+                self.ax.scatter(current_x, current_y, color=self.waypoints[idx//15]['color'],
+                              s=60, edgecolors='black', zorder=5)
+                self.ax.text(current_x+label_offset, current_y+label_offset, self.waypoints[idx//15]['label'], 
+                    fontsize=18, color='black', weight='bold',
+                    ha='center', va='center'
+                    )
+                idx += 1
+                
+                
+            else:
+                self.ax.plot(current_x, current_y, 'gray', markersize=10, label='Current Position')
             
             # wp_x = [wp[0] for wp in self.waypoints]
             # wp_y = [wp[1] for wp in self.waypoints]
@@ -372,19 +444,73 @@ class RusselPlotAnimator:
                 print(f"Frame {frame_idx}/{len(x_coords)} completato")
         
         print("Creando video...")
-        
-        # Crea video
-        # fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-        # video_writer = cv2.VideoWriter(output_path, fourcc, self.fps, (self.width, self.height))
-        
-        # for frame_idx in range(len(x_coords)):
-        #     frame_path = os.path.join(temp_dir, f"frame_{frame_idx:06d}.png")
-        #     frame = cv2.imread(frame_path)
-        #     if frame is not None:
-        #         video_writer.write(frame)
-        
-        # video_writer.release()
-        
+    
+        # Create video 
+        fourcc = cv2.VideoWriter_fourcc(*'mp4v')  
+        video_writer = cv2.VideoWriter(output_path, fourcc, self.fps, (self.width, self.height))
+
+        # Check if VideoWriter was initialized properly
+        if not video_writer.isOpened():
+            print(f"Failed to open video writer with mp4v codec. Trying alternative codecs...")
+            video_writer.release()
+            
+            # Try alternative codecs
+            for codec in ['XVID', 'X264', 'avc1']:
+                fourcc = cv2.VideoWriter_fourcc(*codec)
+                video_writer = cv2.VideoWriter(output_path, fourcc, self.fps, (self.width, self.height))
+                if video_writer.isOpened():
+                    print(f"Successfully opened video writer with {codec} codec")
+                    break
+                video_writer.release()
+            
+            # If all codecs fail, try changing the file extension
+            if not video_writer.isOpened():
+                output_path_avi = output_path.replace('.mp4', '.avi')
+                fourcc = cv2.VideoWriter_fourcc(*'XVID')
+                video_writer = cv2.VideoWriter(output_path_avi, fourcc, self.fps, (self.width, self.height))
+                if video_writer.isOpened():
+                    print(f"Fallback: saving as AVI format to {output_path_avi}")
+                    output_path = output_path_avi
+
+        if not video_writer.isOpened():
+            raise RuntimeError("Failed to initialize video writer with any codec")
+
+        frames_written = 0
+        for frame_idx in range(len(x_coords)):
+            frame_path = os.path.join(temp_dir, f"frame_{frame_idx:06d}.png")
+            
+            if not os.path.exists(frame_path):
+                print(f"Warning: Frame {frame_path} does not exist, skipping...")
+                continue
+                
+            frame = cv2.imread(frame_path)
+            if frame is None:
+                print(f"Warning: Could not read frame {frame_path}, skipping...")
+                continue
+            
+            # Ensure frame has the correct dimensions
+            if frame.shape[:2] != (self.height, self.width):
+                print(f"Warning: Frame {frame_idx} has dimensions {frame.shape[:2]}, expected ({self.height}, {self.width})")
+                frame = cv2.resize(frame, (self.width, self.height))
+            
+            # Write frame
+            success = video_writer.write(frame)
+            if success:
+                frames_written += 1
+            else:
+                print(f"Warning: Failed to write frame {frame_idx}")
+
+        print(f"Successfully wrote {frames_written} frames to video")
+        video_writer.release()
+
+        # Verify the output file
+        if os.path.exists(output_path):
+            file_size = os.path.getsize(output_path)
+            print(f"Output video file size: {file_size} bytes")
+            if file_size < 1000: 
+                print("Warning: Output file is very small, possibly corrupted")
+        else:
+            print("Error: Output file was not created")
         # # Pulisci cartella frames
         # for frame_idx in range(len(x_coords)):
         #     frame_path = os.path.join(temp_dir, f"frame_{frame_idx:06d}.png")

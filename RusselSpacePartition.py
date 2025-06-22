@@ -160,7 +160,7 @@ POLAR_REGIONS = {
             'min':90,
             'max':95.45
         },
-        'color': '#ffd166'
+        'color': '#B8001F'
      },
     '2':{
         'radius':{
@@ -182,7 +182,7 @@ POLAR_REGIONS = {
             'min':95.45,
             'max':110.05
         },
-        'color': '#ffd166'
+        'color': '#FF2929'
      },
     '4':{
         'radius':{
@@ -215,7 +215,7 @@ POLAR_REGIONS = {
             'min':110.05,
             'max':125.53
         },
-        'color': '#ffd166'
+        'color': '#FF2929'
      },
     '7':{
         'radius':{
@@ -226,7 +226,7 @@ POLAR_REGIONS = {
             'min':110.05,
             'max':125.53
         },
-        'color': '#ffd166'
+        'color': '#B8001F'
      },
     '8':{
         'radius':{
@@ -259,7 +259,7 @@ POLAR_REGIONS = {
             'min':135,
             'max':149.88
         },
-        'color': '#ffd166'
+        'color': '#FF2929'
      },
     '11':{
         'radius':{
@@ -281,7 +281,7 @@ POLAR_REGIONS = {
             'min':135,
             'max':149.88
         },
-        'color': '#ffd166'
+        'color': '#B8001F'
      },
     '13':{
         'radius':{
@@ -303,7 +303,7 @@ POLAR_REGIONS = {
             'min':149.88,
             'max':163.3
         },
-        'color': '#ffd166'
+        'color': '#FF2929'
      },
     '15':{
         'radius':{
@@ -359,7 +359,7 @@ POLAR_REGIONS = {
             'max':213.82
 
         },
-        'color': '#ffd166'
+        'color': '#FFD63A'
      },
     '20':{
         'radius':{
@@ -392,7 +392,7 @@ POLAR_REGIONS = {
             'min':225,
             'max':244.43
         },
-        'color': '#ffd166'
+        'color': '#FFD63A'
      },
     '23':{
         'radius':{
@@ -414,7 +414,7 @@ POLAR_REGIONS = {
             'min':225,
             'max':230.6
         },
-        'color': '#ffd166'
+        'color': '#A5158C'
      },
     '25':{
         'radius':{
@@ -436,7 +436,7 @@ POLAR_REGIONS = {
             'min':244.43,
             'max':256.34
         },
-        'color': '#ffd166'
+        'color': '#FFD63A'
      },
     '27':{
         'radius':{
@@ -469,7 +469,7 @@ POLAR_REGIONS = {
             'min':256.34,
             'max':270
         },
-        'color': '#ffd166'
+        'color': '#FFD63A'
      },
     '31':{
         'radius':{
@@ -513,7 +513,7 @@ POLAR_REGIONS = {
                 'min':309.44,
                 'max':320.31
         },
-        'color': '#ffd166'
+        'color': '#80C4E9'
      },
     '35':{
         'radius':{
@@ -546,7 +546,7 @@ POLAR_REGIONS = {
                     'min':344.43,
                     'max':360
             },
-        'color': '#ffd166'
+        'color': '#16C47F'
      },
     '38':{
         'radius':{
