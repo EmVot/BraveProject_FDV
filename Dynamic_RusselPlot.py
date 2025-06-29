@@ -8,7 +8,7 @@ import cv2
 import os
 from typing import List, Tuple, Optional, Dict
 from enum import Enum
-from RusselSpacePartition import POLAR_REGIONS 
+from RusselSpacePartition import POLAR_REGIONS, AREA_LABELS 
 
 
 class TrailMode(Enum):
@@ -222,7 +222,7 @@ class CircumplexPlotter:
 
 class RusselPlotAnimator:
     def __init__(self, width: int = 1920, height: int = 1080, fps: int = 30, dpi: int = 100,
-                 polar_regions: Optional[Dict] = None):
+                 polar_regions: Optional[Dict] = None, area_labels: bool = True):
         """
         Inizializza l'animatore per il Russel Plot.
         
@@ -244,10 +244,13 @@ class RusselPlotAnimator:
         self.waypoints = []
         if polar_regions is None:
             polar_regions = POLAR_REGIONS
-        self.setup_russel_plot(figsize=(self.fig_width, self.fig_height), polar_regions=polar_regions)
+        if area_labels:
+            self.setup_russel_plot(figsize=(self.fig_width, self.fig_height), polar_regions=polar_regions, area_labels=AREA_LABELS)
+        else:
+            self.setup_russel_plot(figsize=(self.fig_width, self.fig_height), polar_regions=polar_regions)
         
     def setup_russel_plot(self, figsize: Tuple[float, float] = (10,10),
-                          polar_regions: Optional[Dict] = None):
+                          polar_regions: Optional[Dict] = None, area_labels: Optional[Dict] = None):
         """
         Configura il grafico base del Russel Plot.
         
@@ -262,7 +265,60 @@ class RusselPlotAnimator:
                                 polar_regions[region]['angle']['min'], polar_regions[region]['angle']['max'],
                                 color=polar_regions[region]['color'], alpha=0.6, label=region)
                 #print(f"Added region: {region}")
-        
+        axis_threshold = 0.1
+        ocra_color = '#CC8800'
+        if area_labels:
+            for i, (label, (x,y)) in enumerate(area_labels.items()):
+                is_near_x_axis = abs(y) < axis_threshold
+                is_near_y_axis = abs(x) < axis_threshold
+                is_near_axes = is_near_x_axis or is_near_y_axis
+                if is_near_axes:
+                    # Label normale (orizzontale) per punti prossimi agli assi
+                    rotation = 0
+                    if i == 4: 
+                        ha = 'left'
+                        va = 'bottom'
+                    elif i == 9:
+                        ha = 'center'
+                        va = 'top'
+                    elif i == 14:
+                        ha = 'right'
+                        va = 'bottom'
+                    elif i == 19:
+                        ha = 'center'
+                        va = 'bottom'
+                else:
+                    # Label obliqua seguendo la retta che passa per l'origine
+                    angle_rad = np.arctan2(y, x)
+                    rotation = np.degrees(angle_rad)
+
+                    # Regola l'orientamento del testo per evitare che sia capovolto
+                    if rotation > 90:
+                        rotation -= 180
+                    elif rotation < -90:
+                        rotation += 180
+                    if i < 5: 
+                        ha = 'left'
+                        va = 'bottom'
+                    if i >=5 and i<10 : 
+                        ha = 'left'
+                        va = 'top'
+                    if i >=10 and i<15 :
+                        ha = 'right'
+                        va = 'top'
+                    if i >=15 and i<20 :
+                        ha = 'right'
+                        va = 'bottom'
+                    
+                # Aggiungi la label al grafico
+                circumplex.ax.text(x, y, label, 
+                         rotation=rotation,
+                         horizontalalignment=ha,
+                         verticalalignment=va,
+                         color=ocra_color,
+                         fontsize=10,  
+                         bbox=None)
+
         self.fig = circumplex.fig
         self.ax = circumplex.ax
         self.regions = circumplex.regions
@@ -393,7 +449,7 @@ class RusselPlotAnimator:
         for frame_idx in range(len(x_coords)): 
             
             self.ax.clear()
-            self.setup_russel_plot(figsize=(self.fig_width, self.fig_height), polar_regions=self.regions)       
+            self.setup_russel_plot(figsize=(self.fig_width, self.fig_height), polar_regions=self.regions, area_labels=AREA_LABELS)       
             current_x, current_y = x_coords[frame_idx], y_coords[frame_idx]
             
             # # Traiettoria completa (tratteggiata completa)
@@ -405,7 +461,7 @@ class RusselPlotAnimator:
                 if frame_idx > 0:
                     trail_x = x_coords[:frame_idx+1]
                     trail_y = y_coords[:frame_idx+1]
-                    self.ax.plot(trail_x, trail_y, '#B771E5', linewidth=4, label='Trail')
+                    self.ax.plot(trail_x, trail_y, '#ba0be0', linewidth=4, label='Trail')
             
             elif trail_mode == TrailMode.FIXED_LENGTH:
                 # Modalità 2: Scia di lunghezza fissa
