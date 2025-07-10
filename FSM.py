@@ -13,6 +13,7 @@ class State:
     oxMasks: bool
     turbolences: bool
     voices: int
+    
 
 
 @dataclass

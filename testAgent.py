@@ -2,7 +2,62 @@ import socket
 import json
 
 HOST = "127.0.0.1"
-PORT = 12345
+OUT_PORT = 5000
+IN_PORT = 5001
+
+
+lightining_json = {
+    'lightinigs':bool
+}
+
+exposure_json = {
+    'min':float,
+    'max':float,
+    'exposure':float
+}
+
+rain_json = {
+    'min' : 0.0,
+    'max' : 2e4,
+    'rain':float
+}
+
+flashes_json = {
+    'flashes':bool
+}
+
+turbolences_json = {
+    'min':0.0,
+    'max':2.0,
+    'pace': .1,
+    'turbolescences':float
+}
+
+voices_json = {
+    'voice':{
+        'voice1':1,
+        'voice2':2,
+        'voice3':3,
+    },
+    'volume':{
+        'intensity':float,
+        'min':0.0,
+        'max':1.0,
+        'step':.1
+    }
+}
+
+oxmasks_json = {
+    'masks': bool
+}
+
+rumbling_json = {
+    'rumbling':bool
+}
+
+
+
+
 
 def send_state(host, port, exposure_value):
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -22,25 +77,26 @@ def send_state(host, port, exposure_value):
 if __name__ == '__main':
 
     # Esempio di utilizzo
-    send_state("127.0.0.1", 12345, 12)
-    #creates the TCP socket
-    server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    ## send_state("127.0.0.1", 12345, 12)
+    #creates the TCP socket for input signaling
+    input_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     # Bind the socket to the address and port
-    server_socket.bind((HOST, PORT))
+    input_socket.bind((HOST, IN_PORT))
 
     # Start listening for connections
-    server_socket.listen(2)
-    print(f"Listening on {HOST}:{PORT}...")
+    input_socket.listen(2)
+    print(f"Listening on {HOST}:{IN_PORT}...")
 
     try:
         while True:
+
             '''
             TODO implement message retrivial logic
             TODO define the signal format
             TODO handle the state transaction (FSM module)
             '''
             # Accept a new connection
-            client_socket, addr = server_socket.accept()
+            client_socket, addr = input_socket.accept()
             print(f"Connection from {addr}")
 
             # Receive data
@@ -57,4 +113,4 @@ if __name__ == '__main':
         print("Shutting down server")
 
     finally:
-        server_socket.close()
+        input_socket.close()
