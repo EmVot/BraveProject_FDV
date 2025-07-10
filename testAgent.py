@@ -56,7 +56,7 @@ rumbling_json = {
 }
 
 
-
+END_SIGNAL = "end"
 
 
 def send_state(host, port, exposure_value):
@@ -74,7 +74,7 @@ def send_state(host, port, exposure_value):
 
 
 
-if __name__ == '__main':
+if __name__ == '__main__':
 
     # Esempio di utilizzo
     ## send_state("127.0.0.1", 12345, 12)
@@ -86,10 +86,10 @@ if __name__ == '__main':
     # Start listening for connections
     input_socket.listen(2)
     print(f"Listening on {HOST}:{IN_PORT}...")
+    
 
     try:
         while True:
-
             '''
             TODO implement message retrivial logic
             TODO define the signal format
@@ -100,11 +100,12 @@ if __name__ == '__main':
             print(f"Connection from {addr}")
 
             # Receive data
-            data = client_socket.recv(1024)
-            print(f"Received: {data.decode()}")
+            data:dict = json.loads(client_socket.recv(1024))
+            #print(f"Received: {data}")
 
-            # Optionally, send a response
-            client_socket.sendall(b"Message received")
+            if data.get('message') == END_SIGNAL:
+                print("recived end signal, shutting down AI Agent")
+                break
 
             # Close the connection
             client_socket.close()

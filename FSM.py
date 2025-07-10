@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from typing import List, Callable, Optional
 
-
 @dataclass(frozen=True)
 class State:
     arousal: float
@@ -13,14 +12,11 @@ class State:
     oxMasks: bool
     turbolences: bool
     voices: int
-    
-
 
 @dataclass
 class Transition:
     condition: Callable[[State], bool]
     next_state: State
-
 
 class StateMachine:
     def __init__(self, initial_state: State):
@@ -48,8 +44,7 @@ def condition_to_next_example(state: State) -> bool:
         and not state.rain
         and not state.lightings
         and not state.exposure
-    )
-
+)
 
 # === ESEMPIO DI UTILIZZO ===
 
