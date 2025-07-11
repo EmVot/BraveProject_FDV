@@ -1,5 +1,8 @@
 import socket
 import json
+import time
+from FSM import State
+from dataclasses import dataclass, field
 
 HOST = "127.0.0.1"
 OUT_PORT = 5000
@@ -58,6 +61,40 @@ rumbling_json = {
 
 END_SIGNAL = "end"
 
+@dataclass
+class UnityMessage:
+
+    arousal: float = 0.0
+    valence: float = 0.0
+    time: int = 0
+    rain: float = 0.0
+    lightings: bool = False
+    exposure: float = 0.0
+    oxMasks: bool = False
+    turbolences: float = 0.0
+    voices: dict = field(default_factory=lambda: {"volume":0.0,'type':1})
+    rumbling: bool = False
+
+    def __init__(self, arousal: float = 0.0,
+                    valence: float = 0.0,
+                    time: int = 0,
+                    rain: float = 0.0,
+                    lightings: bool = False,
+                    exposure: float = 0.0,
+                    oxMasks: bool = False,
+                    turbolences: float = 0.0,
+                    voices = None,
+                    rumbling: bool = True):
+        self.arousal = arousal
+        self.valence = valence
+        self.time = time
+        self.rain= rain
+        self.lightings = lightings
+        self.exposure = exposure
+        self.oxMasks = oxMasks
+        self.turbolences = turbolences
+        self.voices = voices
+        self.rumbling = rumbling
 
 def send_state(host, port, exposure_value):
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -71,6 +108,25 @@ def send_state(host, port, exposure_value):
         print(f"Errore: {e}")
     finally:
         client_socket.close()
+
+#def super class sessione
+# def method logica mapping pass
+
+##def class agent
+## def init
+    #apri socket
+    #init counter
+
+## def method loop
+## ascolto multimotion
+## calcolo il messaggio -> sessione.logica()
+    ### NB ogni messaggio mandato a unity implpementare un tempo di attesa per la stabilizzazione del prossimo stato emotivo
+## lo comunico
+
+## def instanzia sessione (sessionID = None)
+
+#def method logica instanza (EmotionalState, index) -> UnityMessage
+    
 
 
 
@@ -86,6 +142,10 @@ if __name__ == '__main__':
     # Start listening for connections
     input_socket.listen(2)
     print(f"Listening on {HOST}:{IN_PORT}...")
+
+    agent = State()
+
+
     
 
     try:

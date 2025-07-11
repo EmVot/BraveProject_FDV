@@ -1,17 +1,19 @@
 from dataclasses import dataclass
 from typing import List, Callable, Optional
 
-@dataclass(frozen=True)
+
+@dataclass
 class State:
-    arousal: float
-    valence: float
-    time: str
-    rain: bool
-    lightings: bool
-    exposure: bool
-    oxMasks: bool
-    turbolences: bool
-    voices: int
+    arousal: float = 0.0
+    valence: float = 0.0
+    time: int = 0
+    rain: float = 0.0
+    lightings: bool = False
+    exposure: float = 0.0
+    oxMasks: bool = False
+    turbolences: float = 0.0
+    voices: dict[float,int]
+    rumbling: bool = 0.0
 
 @dataclass
 class Transition:
