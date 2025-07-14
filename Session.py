@@ -120,4 +120,3 @@ class Session1(Session):
                 self._unity_state.applauses = True
                 self._unity_state.turbolences = 0
                 self._unity_state.exposure += self._unity_state.exposure * 0.5
-
