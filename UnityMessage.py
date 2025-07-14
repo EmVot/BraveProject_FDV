@@ -60,11 +60,14 @@ class UnityMessage:
     time: int = 0
     rain: float = 0.0
     lightings: bool = False
+    blinking_lights: bool = False
     exposure: float = 0.0
     oxMasks: bool = False
     turbolences: float = 0.0
     voices: dict = field(default_factory=lambda: {"volume":0.0,'type':1})
     rumbling: bool = False
+    seatbelt_signal = False
+    applauses = False
 
     def __init__(self, arousal: float = 0.0,
                     valence: float = 0.0,
@@ -75,7 +78,10 @@ class UnityMessage:
                     oxMasks: bool = False,
                     turbolences: float = 0.0,
                     voices = None,
-                    rumbling: bool = True):
+                    rumbling: bool = True,
+                    seatbelt_signal = False,
+                    blinking_lights: bool = False,
+                    applauses:bool = False):
         self.arousal = arousal
         self.valence = valence
         self.time = time
@@ -86,3 +92,6 @@ class UnityMessage:
         self.turbolences = turbolences
         self.voices = voices
         self.rumbling = rumbling
+        self.seatbelt_signal = seatbelt_signal
+        self.blinking_lights = blinking_lights
+        self.applauses = applauses

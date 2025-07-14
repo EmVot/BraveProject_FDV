@@ -1,7 +1,8 @@
-import socket
 import json
+import socket
 from dataclasses import asdict
-from  Session import Session
+
+from Session import Session
 from UnityMessage import UnityMessage
 
 HOST = "127.0.0.1"
@@ -58,6 +59,7 @@ class Agent:
         finally:
             self.input_socket.close()
             self.output_socket.close()
+
 
 
     ### NB ogni messaggio mandato a unity implpementare un tempo di attesa per la stabilizzazione del prossimo stato emotivo
