@@ -55,37 +55,37 @@ class Session1(Session):
             (0.8993114650170492, 141.6221079228427), # distressed - 5
             (0.8274794391537607, 161.20011484134733),  #bitter- 6
         ]
-
+        with open('therapist_transcripts.txt', 'r') as file:
+            self.therapist_transcripts = file.readlines()
+            
+    def get_therapist_transcript(self, step):
+        return self.therapist_transcripts[step]
+    
     def map_state(self, state, step) -> UnityMessage:
         closest_index = next(
                 (i for i, point in enumerate(self.ref_points) if self.is_within_radius((state.valence, state.arousal), point)),
                 -1
             )
-
         match closest_index:
             case 0 if step < self.tot_steps / 10: # 1
                 self._unity_state.exposure = self._unity_state.exposure - 0.3 * self._unity_state.exposure
                 self._unity_state.voices = {'volume' : 0.5, 'type' : 0}
                 self._unity_state.rumbling = True
                 return self._unity_state
-                
             case 1 if step < self.tot_steps / 10: #2
                 self._unity_state.exposure = self._unity_state.exposure - 0.5 * self._unity_state.exposure
                 self._unity_state.rain = 200
                 self._unity_state.voices = {'volume' : 1, 'type' : 0}
                 return self._unity_state
-            
             case 2 if step < self.tot_steps / 15: #3
                 self._unity_state.exposure = self._unity_state.exposure - 0.5 * self._unity_state.exposure
                 self._unity_state.rain = 10000
                 self._unity_state.voices = {'volume' : 1, 'type' : 2}
                 return self._unity_state
-                
             case 2: #10
                 self._unity_state.exposure += self._unity_state.exposure * 0.3
                 self._unity_state.voices = {'volume' : 1, 'type' : 0}
                 return self._unity_state
-            
             case 3 if step < self.tot_steps / 20: #4
                 self._unity_state.lightings = True
                 self._unity_state.rain = 20000
@@ -98,20 +98,17 @@ class Session1(Session):
                 self._unity_state.voices={'volume':0.5, 'type':2}
                 self._unity_state.rain = 0
                 return self._unity_state
-
             case 4 if step < self.tot_steps / 25: #5
                 self._unity_state.oxMasks = True
                 self._unity_state.voices = {'volume' : 1, 'type' : 3}
                 self._unity_state.turbolences = 1.5
                 return self._unity_state
-            
             case 5 if step < self.tot_steps / 30: #6
                 #distressed state: plane lights stop blinking
                 self._unity_state.blinking_lights=False
                 self._unity_state.turbolences=1.0
                 self._unity_state.voices = {'volume' : 0.5, 'type' : 3}
                 return self._unity_state
-            
             case 5 if step < self.tot_steps / 35: #7
                 self._unity_state.turbolences= 0.5
                 self._unity_state.rain = 500
@@ -120,3 +117,7 @@ class Session1(Session):
                 self._unity_state.applauses = True
                 self._unity_state.turbolences = 0
                 self._unity_state.exposure += self._unity_state.exposure * 0.5
+                return self._unity_state
+            case _ :
+                return self._unity_state
+            

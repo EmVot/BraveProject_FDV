@@ -54,10 +54,6 @@ END_SIGNAL = "end"
 
 @dataclass
 class UnityMessage:
-
-    arousal: float = 0.0
-    valence: float = 0.0
-    time: int = 0
     rain: float = 0.0
     lightings: bool = False
     blinking_lights: bool = False
@@ -69,9 +65,7 @@ class UnityMessage:
     seatbelt_signal = False
     applauses = False
 
-    def __init__(self, arousal: float = 0.0,
-                    valence: float = 0.0,
-                    time: int = 0,
+    def __init__(self,
                     rain: float = 0.0,
                     lightings: bool = False,
                     exposure: float = 0.0,
@@ -82,9 +76,6 @@ class UnityMessage:
                     seatbelt_signal = False,
                     blinking_lights: bool = False,
                     applauses:bool = False):
-        self.arousal = arousal
-        self.valence = valence
-        self.time = time
         self.rain= rain
         self.lightings = lightings
         self.exposure = exposure

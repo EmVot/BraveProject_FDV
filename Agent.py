@@ -2,6 +2,9 @@ import json
 import socket
 from dataclasses import asdict
 
+from regex import E
+
+from BraveProject_FDV.multimotionDummy import EmotionalState
 from Session import Session
 from UnityMessage import UnityMessage
 
@@ -34,9 +37,17 @@ class Agent:
 
         return data
     
-    def send_state(self,message:UnityMessage):
+    def send_state(self, data , message:UnityMessage):
         try:
-            json_message = json.dumps(asdict(message))
+            t_transcript = self.session.get_therapist_transcript(self.step)
+            new_d = {
+                "step": self.step,
+                "emotional_state": asdict(data.get("emotional_state")),
+                "patient_transcript": data.get("patient_transcript"),
+                "therapist_transcript": t_transcript,
+                "unity_message": asdict(message)
+            }
+            json_message = json.dumps(new_d)
             self.output_socket.sendall(json_message.encode('utf-8'))
             print(f"Sent message: {json_message}")
         except Exception as e:
@@ -51,11 +62,12 @@ class Agent:
                 data = self.listen()
                 if data.get('message') == END_SIGNAL:
                     print("recieved end signal, shutting down Agent")
+                    self.send_state(END_SIGNAL)
                     break
                 self.step += 1   
-                message =  self.session.map_state(data, self.step)
-                
-                self.send_state(message)
+                message =  self.session.map_state(data.get("emotional_state"), self.step)
+
+                self.send_state(data, message)
         finally:
             self.input_socket.close()
             self.output_socket.close()

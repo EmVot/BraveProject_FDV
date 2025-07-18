@@ -16,13 +16,14 @@ class EmotionalState:
     '''
     This class describes the emotional state of the patient using its Russel space polar coordinates arousal and valence
     '''
-
-    arousal:float
     valence:float
+    arousal:float
     
-    def __init__(self,arousal:float,valence:float):
-        self.arousal = arousal
+    
+    def __init__(self,valence:float, arousal:float):
         self.valence = valence
+        self.arousal = arousal
+        
 
     
 END_SIGNAL = {
@@ -77,16 +78,16 @@ def generate_session1_records(tot_steps = 50):
     return session1_records
 
 
-def send_state(host, port, emotional_state:EmotionalState = EmotionalState(0,0), end = False):
+def send_state(host, port, patient_transcript: str, emotional_state:EmotionalState = EmotionalState(0,0), end = False):
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
     try:
         client_socket.connect((host, port))
 
         if end:
             json_message=json.dumps(END_SIGNAL)
         else:
-            json_message = json.dumps(asdict(emotional_state))
+            full_state = {"patient_transcript": patient_transcript, "state": asdict(emotional_state)}
+            json_message = json.dumps(full_state)
 
         client_socket.sendall(json_message.encode('utf-8'))
         print(f"Messaggio inviato: {json_message}")
@@ -95,20 +96,19 @@ def send_state(host, port, emotional_state:EmotionalState = EmotionalState(0,0),
         print(f"Errore: {e}")
         client_socket.close()
         exit(-1)
-
-
     finally:
         client_socket.close()
 
 
 if __name__ == '__main__':
-
     states = generate_session1_records(tot_steps=50)
     #   initial state
     print("Begin")
+    with open('patient_transcript.txt', 'r') as f:
+       patient_transcripts = f.readlines()
 
-    for state in states:
-        send_state(HOST,OUT_PORT,state)
+    for i in len(states):
+        send_state(HOST,OUT_PORT, patient_transcript=patient_transcripts[i], emotional_state=states[i])
         time.sleep(SCENARIO_STEP)
     send_state(HOST,OUT_PORT,end=True)
     
