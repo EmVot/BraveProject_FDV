@@ -1,0 +1,1157 @@
+{
+    "0": {
+        "emotional_state": {
+            "valence": 0.7233399911623,
+            "arousal": -0.6730319357494
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "Welcome back, Alex. You're seated on the plane, and everything looks peaceful right now. How are you feeling in this moment?\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "1": {
+        "emotional_state": {
+            "valence": 0.5500049926352499,
+            "arousal": -0.5164149464578334
+        },
+        "patient_transcript": "Honestly? I feel pretty calm. It\u2019s bright out there, and I don\u2019t feel the usual tension in my chest yet.\n",
+        "therapist_transcript": "Good.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "2": {
+        "emotional_state": {
+            "valence": 0.3766699941082,
+            "arousal": -0.35979795716626667
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "3": {
+        "emotional_state": {
+            "valence": 0.20333499558114998,
+            "arousal": -0.20318096787469997
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "4": {
+        "emotional_state": {
+            "valence": 0.029999997054100058,
+            "arousal": -0.046563978583133325
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "5": {
+        "emotional_state": {
+            "valence": -0.14333500147294997,
+            "arousal": 0.11005301070843332
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "6": {
+        "emotional_state": {
+            "valence": -0.31667,
+            "arousal": 0.26667
+        },
+        "patient_transcript": "Okay\u2026 did it just get darker? I hear rain. Is that part of the simulation?\n",
+        "therapist_transcript": "Yes, you\u2019re noticing it correctly. Light rain has started outside the window. Just like in a real flight, the weather can shift gently. But inside this cabin, nothing\u2019s changed\u2014your space is still stable.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "7": {
+        "emotional_state": {
+            "valence": -0.269725,
+            "arousal": 0.16666944444444448
+        },
+        "patient_transcript": "Right\u2026 I know that. But part of me still thinks, 'what if this means something worse is coming?'\n",
+        "therapist_transcript": "That\u2019s a powerful insight. That \u2018what if\u2019 voice is old wiring. But right now, you have new tools. \n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "8": {
+        "emotional_state": {
+            "valence": -0.22278000000000003,
+            "arousal": 0.06666888888888892
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "Let\u2019s take one breath together\u2014deep in\u2026 and out slowly. We\u2019re not rushing forward. You\u2019re still in control.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "9": {
+        "emotional_state": {
+            "valence": -0.17583500000000002,
+            "arousal": -0.03333166666666665
+        },
+        "patient_transcript": "<BREATHE>\n",
+        "therapist_transcript": "<BREATHE>\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "10": {
+        "emotional_state": {
+            "valence": -0.12889000000000003,
+            "arousal": -0.13333222222222219
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "11": {
+        "emotional_state": {
+            "valence": -0.08194500000000005,
+            "arousal": -0.23333277777777767
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "12": {
+        "emotional_state": {
+            "valence": -0.035,
+            "arousal": -0.3333333333333333
+        },
+        "patient_transcript": "The rain\u2019s really coming down now... I know it\u2019s fake, but it\u2019s starting to feel real. It\u2019s reminding me of that flight I had where we got stuck circling for an hour.\n",
+        "therapist_transcript": "I hear you. That memory is loud right now. Let\u2019s acknowledge it\u2014your mind is connecting this scene with that past discomfort. But here and now, you\u2019re safe. This is not that flight.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "13": {
+        "emotional_state": {
+            "valence": -0.04166666666666667,
+            "arousal": -0.1280561111111111
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "This is a controlled space where you are practicing staying present, even when things feel uncertain.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "14": {
+        "emotional_state": {
+            "valence": -0.04833333333333333,
+            "arousal": 0.07722111111111113
+        },
+        "patient_transcript": "Yeah, I get that logically\u2026 but I can already feel my shoulders tensing up, and I\u2019m bracing\u2014like waiting for something worse.\n",
+        "therapist_transcript": "Let\u2019s work with that feeling, not against it. Shift your awareness to your breath for a moment. Notice the tension in your shoulders without trying to fix it. Just observe.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "15": {
+        "emotional_state": {
+            "valence": -0.055,
+            "arousal": 0.28249833333333335
+        },
+        "patient_transcript": "<BREATHE>\n",
+        "therapist_transcript": "You\u2019re not in danger\u2014you\u2019re in training. You\u2019re rewiring your response one breath at a time.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "16": {
+        "emotional_state": {
+            "valence": -0.06166666666666666,
+            "arousal": 0.4877755555555556
+        },
+        "patient_transcript": "It\u2019s hard, but I\u2019m still here. That\u2019s something, right?\n",
+        "therapist_transcript": "You\u2019re doing exactly what this therapy is about\u2014staying with the discomfort, not running from it.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "17": {
+        "emotional_state": {
+            "valence": -0.06833333333333333,
+            "arousal": 0.6930527777777777
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "And now, we\u2019re going to take one more step together. It might feel harder, but remember: you're not alone, and nothing here can harm you.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "18": {
+        "emotional_state": {
+            "valence": -0.075,
+            "arousal": 0.89833
+        },
+        "patient_transcript": "Okay.\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "19": {
+        "emotional_state": {
+            "valence": -0.12916666666666665,
+            "arousal": 0.8791633333333333
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "20": {
+        "emotional_state": {
+            "valence": -0.18333333333333335,
+            "arousal": 0.8599966666666666
+        },
+        "patient_transcript": "Oh God\u2026 the lightning! This is exactly what I dread. What if something goes wrong? I can\u2019t handle this!\n",
+        "therapist_transcript": "This feels really intense right now, and that\u2019s okay. Your body is responding exactly as it should when faced with perceived danger. Let\u2019s focus on your breath\u2014slow, steady.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "21": {
+        "emotional_state": {
+            "valence": -0.2375,
+            "arousal": 0.84083
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "You\u2019re in the room with me, and this storm is just a part of the simulation, designed to help you get stronger.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "22": {
+        "emotional_state": {
+            "valence": -0.2916666666666667,
+            "arousal": 0.8216633333333333
+        },
+        "patient_transcript": "It feels so real though. I\u2019m starting to shake.\n",
+        "therapist_transcript": "That shaking is your nervous system releasing tension. It\u2019s a sign you\u2019re alive and working through your fear. \n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "23": {
+        "emotional_state": {
+            "valence": -0.3458333333333333,
+            "arousal": 0.8024966666666666
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "Stay with me. We\u2019re safe here. I\u2019ll guide you through it. You\u2019ve faced this before, and you\u2019ve stayed present. You can do it again.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "24": {
+        "emotional_state": {
+            "valence": -0.4,
+            "arousal": 0.78333
+        },
+        "patient_transcript": "<SCREAM>\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "25": {
+        "emotional_state": {
+            "valence": -0.45083333333333336,
+            "arousal": 0.74583
+        },
+        "patient_transcript": "I\u2019m terrified... my heart\u2019s racing, but I\u2019m trying not to panic. It feels so real\u2014I don\u2019t know if I can do this\n",
+        "therapist_transcript": "Alex, I know this feels overwhelming right now, but remember\u2014you\u2019re safe and supported. The masks are part of the simulation to help your brain get used to uncertainty.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "26": {
+        "emotional_state": {
+            "valence": -0.5016666666666667,
+            "arousal": 0.70833
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "Focus on your breath with me\u2014slow and steady\u2014and feel the strength you\u2019ve built to face this moment.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "27": {
+        "emotional_state": {
+            "valence": -0.5525,
+            "arousal": 0.67083
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "28": {
+        "emotional_state": {
+            "valence": -0.6033333333333333,
+            "arousal": 0.63333
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "29": {
+        "emotional_state": {
+            "valence": -0.6541666666666666,
+            "arousal": 0.59583
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "30": {
+        "emotional_state": {
+            "valence": -0.705,
+            "arousal": 0.55833
+        },
+        "patient_transcript": "I\u2019m still shaking\u2026 I can\u2019t shake this feeling. The rain and lightning are still out there, and it feels like the danger hasn\u2019t passed.\n",
+        "therapist_transcript": "It\u2019s okay to feel distressed, Alex. Your mind is still on high alert, but notice how the plane is steadier now, the lights have stopped blinking. The storm is less intense than before, even if it\u2019s still visible.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "31": {
+        "emotional_state": {
+            "valence": -0.7033333333333333,
+            "arousal": 0.5649966666666667
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "Let\u2019s focus on what\u2019s here, what\u2019s real right now. You\u2019re safe in this moment, and I\u2019m right here with you. Breathe.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "32": {
+        "emotional_state": {
+            "valence": -0.7016666666666667,
+            "arousal": 0.5716633333333333
+        },
+        "patient_transcript": "<BREATHE>\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "33": {
+        "emotional_state": {
+            "valence": -0.7,
+            "arousal": 0.57833
+        },
+        "patient_transcript": "<BREATHE>\n",
+        "therapist_transcript": "Good job, go on.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "34": {
+        "emotional_state": {
+            "valence": -0.6983333333333333,
+            "arousal": 0.5849966666666667
+        },
+        "patient_transcript": "<BREATHE>\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "35": {
+        "emotional_state": {
+            "valence": -0.6966666666666667,
+            "arousal": 0.5916633333333333
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "36": {
+        "emotional_state": {
+            "valence": -0.695,
+            "arousal": 0.59833
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "37": {
+        "emotional_state": {
+            "valence": -0.5916666666666666,
+            "arousal": 0.6449966666666667
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "38": {
+        "emotional_state": {
+            "valence": -0.4883333333333333,
+            "arousal": 0.6916633333333334
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "39": {
+        "emotional_state": {
+            "valence": -0.38499999999999995,
+            "arousal": 0.73833
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "40": {
+        "emotional_state": {
+            "valence": -0.2816666666666666,
+            "arousal": 0.7849966666666667
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "41": {
+        "emotional_state": {
+            "valence": -0.17833333333333334,
+            "arousal": 0.8316633333333334
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "42": {
+        "emotional_state": {
+            "valence": -0.075,
+            "arousal": 0.87833
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "Is it better now?\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "43": {
+        "emotional_state": {
+            "valence": -0.19305499999999998,
+            "arousal": 0.7763861666666667
+        },
+        "patient_transcript": "Yeah, it\u2019s calmer now\u2026 but honestly, I feel kind of bitter. Like, why do I have to put myself through this? It\u2019s exhausting.\n",
+        "therapist_transcript": "That\u2019s completely valid, Alex. Facing fear isn\u2019t easy, and it\u2019s normal to feel frustrated or tired after pushing through so much.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "44": {
+        "emotional_state": {
+            "valence": -0.31111,
+            "arousal": 0.6744423333333334
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "This bitterness shows how real this struggle is for you. Remember, every step you take here is rewiring those old fears, even if it doesn\u2019t feel good right now.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "45": {
+        "emotional_state": {
+            "valence": -0.429165,
+            "arousal": 0.5724985
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "46": {
+        "emotional_state": {
+            "valence": -0.5472199999999999,
+            "arousal": 0.4705546666666667
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "47": {
+        "emotional_state": {
+            "valence": -0.665275,
+            "arousal": 0.36861083333333333
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "48": {
+        "emotional_state": {
+            "valence": -0.78333,
+            "arousal": 0.266667
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "49": {
+        "emotional_state": {
+            "valence": -0.6586083333333334,
+            "arousal": 0.1622225
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "50": {
+        "emotional_state": {
+            "valence": -0.5338866666666666,
+            "arousal": 0.057777999999999996
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "51": {
+        "emotional_state": {
+            "valence": -0.409165,
+            "arousal": -0.0466665
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "-\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "52": {
+        "emotional_state": {
+            "valence": -0.2844433333333334,
+            "arousal": -0.151111
+        },
+        "patient_transcript": "The plane looks normal again\u2026 but I can\u2019t shake this worry. It feels like it\u2019s still lingering.\n",
+        "therapist_transcript": "That\u2019s okay, Alex. Worry doesn\u2019t vanish overnight\u2014it often lingers after facing tough moments. What matters is that you stayed present and experienced it without avoiding.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "53": {
+        "emotional_state": {
+            "valence": -0.15972166666666676,
+            "arousal": -0.25555549999999994
+        },
+        "patient_transcript": "-\n",
+        "therapist_transcript": "We\u2019ll keep working on this together. Take pride in what you\u2019ve accomplished today.\n",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    },
+    "54": {
+        "emotional_state": {
+            "valence": -0.035,
+            "arousal": -0.36
+        },
+        "patient_transcript": "-",
+        "therapist_transcript": "-",
+        "unity_message": {
+            "rain": 0.0,
+            "lightings": false,
+            "blinking_lights": false,
+            "exposure": 8.0,
+            "oxMasks": false,
+            "turbolences": 0.0,
+            "voices": {
+                "volume": 0.5,
+                "type": 0
+            },
+            "rumbling": true
+        }
+    }
+}

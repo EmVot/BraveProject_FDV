@@ -1,23 +1,28 @@
 import math
 from abc import ABC, abstractmethod
 
-import Agent
-
-from BraveProject_FDV.Agent import UnityMessage
-from BraveProject_FDV.multimotionDummy import EmotionalState
+from UnityMessage import UnityMessage
+from multimotionDummy import EmotionalState
 
 
 class Session(ABC):
     _sessions = {}
     
     def __new__(cls, session_id, tau=0):
-
-        if session_id in cls._sessions:
-            instance = cls._sessions[session_id]()
+        if cls is not Session: 
+            instance = super().__new__(cls)
             instance.tau = tau
+            return instance
+        
+        if session_id in cls._sessions:
+            session_class = cls._sessions[session_id]
+            instance = session_class.__new__(session_class, session_id, tau)
             return instance
         raise ValueError(f"Session {session_id} not found")
     
+    def __init__(self, session_id, tau=1.0):
+        pass
+
     @classmethod
     def register(cls, session_id, session_class):
         cls._sessions[session_id] = session_class
@@ -42,10 +47,21 @@ class Session(ABC):
 
 class Session1(Session):
     def __init__(self, session_id, tau=0,tot_steps=50):
-        super().__init__(session_id)
+        super().__init__(session_id, tau)
         self.tot_steps = tot_steps
         self.tau = tau
-        self._unity_state = UnityMessage()
+        self._unity_state = UnityMessage(
+                    rain = 0.0,
+                    lightings = False,
+                    exposure = 8.0,
+                    oxMasks = False,
+                    turbolences = 0.0,
+                    voices = {"volume":0.5,'type':0},
+                    rumbling = True,
+                    seatbelt_signal = False,
+                    blinking_lights = False,
+                    applauses = False
+        )
         self.ref_points = [
             (0.5723106166247,-0.8365047036457), # calm - 0
             (0.413991411612474, 139.89909245378777), #suspicious - 1
@@ -63,13 +79,13 @@ class Session1(Session):
     
     def map_state(self, state, step) -> UnityMessage:
         closest_index = next(
-                (i for i, point in enumerate(self.ref_points) if self.is_within_radius((state.valence, state.arousal), point)),
+                (i for i, point in enumerate(self.ref_points) if self.is_within_radius(state, point)),
                 -1
             )
         match closest_index:
             case 0 if step < self.tot_steps / 10: # 1
                 self._unity_state.exposure = self._unity_state.exposure - 0.3 * self._unity_state.exposure
-                self._unity_state.voices = {'volume' : 0.5, 'type' : 0}
+                self._unity_state.voices = {'volume' : 0.8, 'type' : 0}
                 self._unity_state.rumbling = True
                 return self._unity_state
             case 1 if step < self.tot_steps / 10: #2
