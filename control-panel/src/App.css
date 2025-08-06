@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Sfondo e layout principale */
+.app {
+  height: 100vh;
+  background-image: url('/images/background.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Titolo */
+.title {
   color: white;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* Pannello contenitore */
+.panel {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  min-width: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Layout in orizzontale per OptionSelector */
+.option-selector-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+/* Etichetta allineata orizzontalmente */
+.option-label-inline {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Contenitore dei bottoni */
+.option-buttons-inline {
+  display: flex;
+  gap: 10px;
+}
+
+/* Bottoni opzione (già visti) */
+.option-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.option-button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.option-button.selected {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
 }
