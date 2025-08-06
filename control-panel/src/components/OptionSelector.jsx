@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function OptionSelector({ label, param, options, onChange }) {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState("calm");
 
   const handleSelect = (value) => {
     setSelected(value);

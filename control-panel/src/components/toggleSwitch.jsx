@@ -10,9 +10,12 @@ function ToggleSwitch({ label, param, onChange }) {
   };
 
   return (
-    <div style={{ margin: "15px 0" }}>
-      <label>{label}</label>
-      <input type="checkbox" checked={checked} onChange={handleToggle} />
+    <div className="control toggle-switch-row">
+      <label className="option-label-inline">{label}</label>
+      <label className="switch">
+        <input type="checkbox" checked={checked} onChange={handleToggle} />
+        <span className="slider"></span>
+      </label>
     </div>
   );
 }

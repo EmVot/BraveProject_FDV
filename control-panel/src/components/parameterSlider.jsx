@@ -1,14 +1,24 @@
+import React, { useState } from "react";
 
-function ParameterSlider({ label, min, max, step = 1 }) {
-  
+function ParameterSlider({ label, param, min, max, step = 1, onChange }) {
+  const [value, setValue] = useState((min + max) / 2);
+
+  const handleChange = (e) => {
+    const newValue = Number(e.target.value);
+    setValue(newValue);
+    onChange(param, newValue);
+  };
+
   return (
-    <div style={{ margin: "15px 0" }}>
-      <label>{label}</label>
+    <div className="control option-selector-horizontal">
+      <label className="option-label-inline">{label}</label>
       <input
         type="range"
         min={min}
         max={max}
+        value={value}
         step={step}
+        onChange={handleChange}
       />
     </div>
   );

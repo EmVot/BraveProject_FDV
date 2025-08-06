@@ -16,6 +16,16 @@ function App() {
     });
   };
 
+  const handleSliderChange = (param, value) => {
+    sendMessage({
+      type: "command",
+      action: "update_param",
+      param,
+      value,
+    });
+  };
+
+
   return (
     <div className="app">
       <h1 className="title">VR Control Panel</h1>
@@ -26,6 +36,7 @@ function App() {
           min={9}
           max={12}
           step={0.1}
+          onChange={handleSliderChange}
         />
         <ParameterSlider
           label="Rain Intensity"
@@ -33,6 +44,7 @@ function App() {
           min={0}
           max={20000}
           step={100}
+          onChange={handleSliderChange}
         />
         <ToggleSwitch
           label="Lightning"
@@ -45,6 +57,7 @@ function App() {
           min={0}
           max={2}
           step={0.1}
+          onChange={handleSliderChange}
         />
         <ToggleSwitch
           label="Rumbling"
