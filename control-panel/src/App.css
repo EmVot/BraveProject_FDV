@@ -131,3 +131,15 @@
 .switch input:checked + .slider:before {
   transform: translateX(28px); /* aggiustato per nuova larghezza */
 }
+
+/* disabilitazione generica del controllo */
+.control.disabled {
+  opacity: 0.5;
+  pointer-events: none; /* blocca interazioni sul wrapper */
+}
+
+/* bottoni opzione disabilitati */
+.option-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

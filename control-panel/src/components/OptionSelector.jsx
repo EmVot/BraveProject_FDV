@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-function OptionSelector({ label, param, options, onChange }) {
+function OptionSelector({ label, param, options, onChange, forceValue }) {
   const [selected, setSelected] = useState("calm");
 
-  const handleSelect = (value) => {
-    setSelected(value);
-    onChange(param, value);
+  // forza selezione (es. quando darkness < 10.5 → calm)
+  useEffect(() => {
+    if (forceValue && forceValue !== selected) {
+      setSelected(forceValue);
+    }
+  }, [forceValue, selected]);
+
+  const handleSelect = (opt) => {
+    if (opt.disabled) return;
+    setSelected(opt.value);
+    onChange(param, opt.value);
   };
 
   return (
@@ -15,8 +23,9 @@ function OptionSelector({ label, param, options, onChange }) {
         {options.map((opt, index) => (
           <button
             key={index}
-            className={`option-button ${selected === opt.value ? "selected" : ""}`}
-            onClick={() => handleSelect(opt.value)}
+            className={`option-button ${selected === opt.value ? "selected" : ""} ${opt.disabled ? "disabled" : ""}`}
+            onClick={() => handleSelect(opt)}
+            disabled={!!opt.disabled}
           >
             {opt.label}
           </button>
