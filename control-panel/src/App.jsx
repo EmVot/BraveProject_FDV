@@ -21,7 +21,7 @@ function App() {
       type: "command",
       action: "update_param",
       param,
-      value,
+      value: Number(value),
     });
   };
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function ParameterSlider({ label, param, min, max, step = 1, onChange }) {
-  const [value, setValue] = useState((min + max) / 2);
+  const [value, setValue] = useState(9);
 
   const handleChange = (e) => {
     const newValue = Number(e.target.value);
