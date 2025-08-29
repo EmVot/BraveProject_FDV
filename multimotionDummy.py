@@ -25,21 +25,22 @@ class EmotionalState:
     
 END_SIGNAL = "end"
 
-def generate_session1_records(tot_steps = 55):
+def generate_session1_records(tot_steps = 56):
     '''
     This function generates a list of emotional states for the session 1
     '''
     session1_records = [
-        EmotionalState(0.7233399911623,-0.6730319357494),
-        EmotionalState(-0.31667, 0.26667),
-        EmotionalState(-0.035, -1/3),
-        EmotionalState(-0.075, 0.89833),
-        EmotionalState(-0.4, 0.78333),
-        EmotionalState(-0.705, 0.55833),
-        EmotionalState(-0.695, 0.59833), #start loosening fearful variables
-        EmotionalState(-0.075, 0.87833),
-        EmotionalState(-0.78333, 0.266667),
-        EmotionalState(-0.035, -0.36)
+        EmotionalState(0.7233399911623,-0.6730319357494), #calm
+        EmotionalState(-0.31667, 0.26667), #suspicious
+        EmotionalState(-0.035, -1/3), #worried
+        EmotionalState(-0.075, 0.89833), #alarmed
+        EmotionalState(-0.4, 0.78333), #afraid
+        EmotionalState(-0.705, 0.55833), #distressed
+        EmotionalState(-0.695, 0.59833), #distressed
+        EmotionalState(-0.7197157154895,0.6565490462143), #distressed
+        EmotionalState(-0.3844066248492,0.8360548493221), #afraid
+        EmotionalState(-0.0568380280663,0.8509443309941), #alarmed
+        EmotionalState(-0.78333, 0.266667) #bitter
     ]
 
     if tot_steps > len(session1_records):
@@ -69,6 +70,8 @@ def generate_session1_records(tot_steps = 55):
                interpolated_points.append(EmotionalState(end_wp[0], end_wp[1]))
 
         session1_records = interpolated_points
+    
+    print(f"Generated {len(session1_records)} states for session 1")
     
     return session1_records
 
