@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ParameterSlider from "./components/parameterSlider";
-import ToggleSwitch from "./components/ToggleSwitch";
+import ToggleSwitch from "./components/toggleSwitch";
 import OptionSelector from "./components/OptionSelector";
 import { sendMessage } from "./websocket";
 import "./App.css";
