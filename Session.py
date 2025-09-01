@@ -74,18 +74,18 @@ class Session1(Session):
         print("State: ", state)
         match step:
             case 5: #2
-                self._unity_state.exposure = self._unity_state.exposure - 0.5
+                self._unity_state.exposure = self._unity_state.exposure + 0.5       #9.5
                 message = {"exposure": self._unity_state.exposure}
                 return message, self._unity_state
             case 10: #3
                 print("case 1 (2)")
-                self._unity_state.exposure = self._unity_state.exposure - 1
+                self._unity_state.exposure = self._unity_state.exposure +1      #10.5
                 self._unity_state.rain = 1000
                 message = {"exposure": self._unity_state.exposure, "rain": self._unity_state.rain}
                 return message, self._unity_state
             case 15: #4
                 print("case 2 (3)")
-                self._unity_state.exposure = self._unity_state.exposure - 1.5 
+                self._unity_state.exposure = self._unity_state.exposure + 1.5      #12
                 self._unity_state.rain = 10000
                 self._unity_state.voices = "worried"
                 self._unity_state.turbolence = 0.003
@@ -108,9 +108,9 @@ class Session1(Session):
                     "turbolence": self._unity_state.turbolence
                 }
                 return message, self._unity_state
-            case 21:
-                self._unity_state.lightning = False
-                return {}, self._unity_state
+            #case 21:
+                #self._unity_state.lightning = False
+                #return {}, self._unity_state
             case 25:
                 self._unity_state.turbolence = 0.015
                 self._unity_state.voices = "panic"
@@ -133,7 +133,7 @@ class Session1(Session):
                 #distressed state: plane lights stop blinking
                 self._unity_state.turbolence = 0.005
                 self._unity_state.voices = "worried"
-                self._unity_state.exposure = self._unity_state.exposure + 0.5
+                self._unity_state.exposure = self._unity_state.exposure - 0.5
                 self._unity_state.rain = 15000
                 message = {
                     "turbolence": self._unity_state.turbolence,
@@ -147,25 +147,25 @@ class Session1(Session):
                 print("case 5 (7)")
                 self._unity_state.turbolence = 0.0
                 self._unity_state.rain = 5000
-                self._unity_state.exposure = self._unity_state.exposure + 1
+                self._unity_state.exposure = self._unity_state.exposure - 1
                 self._unity_state.oxygenMasks = False
                 message  = {
+                    "oxygenMasks": self._unity_state.oxygenMasks,
                     "turbolence": self._unity_state.turbolence,
                     "rain": self._unity_state.rain,
                     "exposure": self._unity_state.exposure,
-                    "oxygenMasks": self._unity_state.oxygenMasks
                 }
                 return  message, self._unity_state
             case 45: #9
-                self._unity_state.exposure += 1.5
+                self._unity_state.exposure -= 1.5
                 self._unity_state.rain = 0
                 self._unity_state.voices = "calm"
                 self._unity_state.rumbling = False
                 message = {
-                    "exposure": self._unity_state.exposure,
-                    "rain": self._unity_state.rain,
                     "voices": self._unity_state.voices,
-                    "rumbling": self._unity_state.rumbling
+                    "rumbling": self._unity_state.rumbling,
+                    "rain": self._unity_state.rain,
+                    "exposure": self._unity_state.exposure,
                 }
                 return message, self._unity_state
                 

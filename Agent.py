@@ -4,8 +4,10 @@ from dataclasses import asdict
 from Session import Session, Session1
 import time
 
+from websocket import create_connection
+
 HOST = "127.0.0.1"
-OUT_PORT = 5061
+OUT_PORT = 8080
 IN_PORT = 5060
 
 END_SIGNAL = "end"
@@ -13,6 +15,10 @@ END_SIGNAL = "end"
 
 class Agent:
     def __init__(self):
+        print("Connecting to Unity (WebSocket)...")
+        self.ws = create_connection(f"ws://{HOST}:{OUT_PORT}/")   # <-- WebSocket, non TCP
+        print("Connected to Unity (WebSocket)")
+
         self.input_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         self.input_socket.bind((HOST, IN_PORT))
         self.input_socket.listen(1)
@@ -20,10 +26,9 @@ class Agent:
         self.connection, self.addr = self.input_socket.accept()
         print(f"Connection from {self.addr}")
         print("Connection established, waiting for messages...")
-        print("Connecting to Unity...")
-        self.output_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.output_socket.connect((HOST, OUT_PORT))
-        print("Connected to Unity")
+        #self.output_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        #self.output_socket.connect((HOST, OUT_PORT))
+        #print("Connected to Unity")
 
         self.state_history = {}
 
@@ -49,14 +54,26 @@ class Agent:
         }
         self.state_history[f"{self.step}"] = new_s
 
+    def _to_unity_value(self, v):
+        if isinstance(v, bool):
+            return "true" if v else "false"
+        if isinstance(v, (int, float)):
+            return format(v, "g")  # punto decimale, cultura invariante
+        return str(v)
+
     def send_unity_message(self, msg):
         try:
-            json_message = json.dumps(msg)
-            self.output_socket.sendall(json_message.encode('utf-8'))
-            print(f"Sent message: {json_message}")
+            v = self._to_unity_value(list(msg.values())[0])
+            k = list(msg.keys())[0]
+            self.ws.send(json.dumps({k: v}))
+            #json_message = json.dumps(msg)
+            #self.output_socket.sendall(json_message.encode('utf-8'))
+            #print(f"Sent message: {json_message}")
+            print(f"Sent WS message: {msg}")
         except Exception as e:
             print(f"Error while sending message: {e}")
-            self.output_socket.close()
+            #self.output_socket.close()
+            self.ws.close()
 
     def save_json_history(self, session_id):
         with open(f'session_{session_id}.json', 'w') as f:
@@ -83,7 +100,8 @@ class Agent:
         finally:
             self.save_json_history(session_id)
             self.input_socket.close()
-            self.output_socket.close()
+            #self.output_socket.close()
+            self.ws.close()
 
 if __name__ == "__main__":
     session_id = "session1"

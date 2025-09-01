@@ -64,7 +64,7 @@ class UnityState:
     
 
     def __init__(self,
-                    exposure: float = 12.0,
+                    exposure: float = 9.0,
                     rain: float = 0.0,
                     lightning: bool = False,
                     turbolence: float = 0.0,
