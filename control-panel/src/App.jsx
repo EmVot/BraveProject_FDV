@@ -93,14 +93,26 @@ function App() {
 
         {/* LIGHTNING */}
         <ToggleSwitch
-          label="Lightning"
-          param="lightning"
-          disabled={!lightningEnabled}
-          onChange={(p, v) => {
-            setLightningOn(v); // teniamo lo stato per il blocco di Rain
-            safeSendToggle(lightningEnabled, p, v);
-          }}
-        />
+        label="Flash"
+        param="flash"
+        disabled={!lightningEnabled}
+        momentary
+        autoResetDelay={500} // opzionale
+        onChange={(p, v) => {
+          if (!lightningEnabled) return;
+          if (v) {
+            // invia SOLO ON
+            setLightningOn(true); // per i tuoi clamp UI
+            sendMessage({ type: "command", action: "toggle_param", param: p, value: true });
+          }
+        }}
+        onAutoReset={() => {
+          // torna OFF anche nello stato del parent, così il clamp del cursore non resta bloccato
+          setLightningOn(false);
+        }}
+      />
+
+
 
         {/* TURBOLENCE */}
         <ParameterSlider
