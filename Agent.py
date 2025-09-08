@@ -1,50 +1,118 @@
 import json
 import socket
-from dataclasses import asdict
-from Session import Session, Session1
 import time
-
-from websocket import create_connection
+from dataclasses import asdict
+from websocket import create_connection, WebSocketConnectionClosedException
+from Session import Session, Session1
 
 HOST = "127.0.0.1"
-OUT_PORT = 8080
-IN_PORT = 5060
+UNITY_WS_PORT = 8080   # server WS di Unity
+IN_PORT = 5060         # input TCP come già avevi
 
 END_SIGNAL = "end"
 
+# Parametri del pannello (per scegliere l'action corretta)
+SLIDER_PARAMS = {"exposure", "rain", "turbolence"}
+TOGGLE_OR_OPTION_PARAMS = {"flash", "rumbling", "oxygenMasks", "voices"}
 
 class Agent:
     def __init__(self):
-        print("Connecting to Unity (WebSocket)...")
-        self.ws = create_connection(f"ws://{HOST}:{OUT_PORT}/")   # <-- WebSocket, non TCP
-        print("Connected to Unity (WebSocket)")
+        # --- PREPARA code/variabili PRIMA di connetterti ---
+        self.ws = None
+        self.ws_url = f"ws://{HOST}:{UNITY_WS_PORT}/"
+        self.outgoing_queue = []      # <-- CREA QUI
+        self.state_history = {}       # <-- (facoltativo ma logico metterla qui)
 
-        self.input_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        # --- WebSocket client verso Unity, con retry ---
+        self._ws_connect_with_retry()
+
+        # --- Socket TCP di input (come avevi già) ---
+        self.input_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.input_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.input_socket.bind((HOST, IN_PORT))
         self.input_socket.listen(1)
         print(f"Listening on {HOST}:{IN_PORT}...")
         self.connection, self.addr = self.input_socket.accept()
         print(f"Connection from {self.addr}")
         print("Connection established, waiting for messages...")
-        #self.output_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        #self.output_socket.connect((HOST, OUT_PORT))
-        #print("Connected to Unity")
 
-        self.state_history = {}
+    # ---------- Connessione/reconnessione WS ----------
+
+    def _ws_connect_with_retry(self, max_backoff=5.0):
+        """Prova a connettersi a Unity in loop (backoff fino a 5s)."""
+        delay = 0.5
+        while True:
+            try:
+                print(f"Connecting to Unity WS at {self.ws_url} ...")
+                self.ws = create_connection(self.ws_url, timeout=5)
+                self.ws.settimeout(1.0)  # breve timeout per ping/read
+                print("✅ Connected to Unity WebSocket")
+                # svuota coda se c’è
+                self._flush_queue()
+                return
+            except Exception as e:
+                print(f"❌ Unity WS not available yet: {e} — retrying in {delay:.1f}s")
+                time.sleep(delay)
+                delay = min(max_backoff, delay * 1.5)
+
+    def _ws_safe_send(self, payload: dict):
+        """Invia un messaggio; se WS è chiuso, prova a riconnettere e accoda."""
+        msg = json.dumps(payload)
+        try:
+            if self.ws is None:
+                raise WebSocketConnectionClosedException("WS not connected")
+            self.ws.send(msg)
+            print(f"📤 Sent WS message: {payload}")
+        except Exception as e:
+            print(f"⚠️ WS send failed: {e}. Queuing and reconnecting...")
+            self.outgoing_queue.append(msg)
+            self._ws_reconnect()
+
+    def _ws_reconnect(self):
+        try:
+            if self.ws:
+                try:
+                    self.ws.close()
+                except Exception:
+                    pass
+            self._ws_connect_with_retry()
+        except Exception as e:
+            print(f"❌ Reconnect failed: {e}")
+
+    def _flush_queue(self):
+        """Invia tutto ciò che è in coda dopo una riconnessione."""
+        if not self.outgoing_queue or self.ws is None:
+            return
+        print(f"🔁 Flushing {len(self.outgoing_queue)} queued messages...")
+        while self.outgoing_queue:
+            msg = self.outgoing_queue.pop(0)
+            try:
+                self.ws.send(msg)
+                print(f"📤 Sent queued: {msg}")
+            except Exception as e:
+                print(f"⚠️ Failed while flushing queue: {e}")
+                # Rimetti in testa e tenta una nuova reconnect
+                self.outgoing_queue.insert(0, msg)
+                self._ws_reconnect()
+                break
+
+    # ---------- Logica di sessione ----------
 
     def listen(self):
         try:
-            data = self.connection.recv(1024)
-            #print(f"Received data: {data}")
-            data:dict = json.loads(data)
+            data = self.connection.recv(4096)
+            if not data:
+                raise ConnectionError("TCP input socket closed")
+            return json.loads(data)
         except Exception as e:
             print(f"Error while listening on agent: {e}")
-            self.connection.close()
-            data = END_SIGNAL
+            try:
+                self.connection.close()
+            except Exception:
+                pass
+            return END_SIGNAL
 
-        return data
-    
-    def save_state(self, data , state):
+    def save_state(self, data, state):
         t_transcript = self.session.get_therapist_transcript(self.step)
         new_s = {
             "emotional_state": data.get("emotional_state"),
@@ -52,32 +120,26 @@ class Agent:
             "therapist_transcript": t_transcript,
             "unity_state": asdict(state)
         }
-        self.state_history[f"{self.step}"] = new_s
+        self.state_history[str(self.step)] = new_s
 
-    def _to_unity_value(self, v):
-        if isinstance(v, bool):
-            return "true" if v else "false"
-        if isinstance(v, (int, float)):
-            return format(v, "g")  # punto decimale, cultura invariante
-        return str(v)
+    def _build_command(self, param, value):
+        # Slider → update_param con numerico
+        if param in SLIDER_PARAMS:
+            try:
+                value = float(value)
+            except (TypeError, ValueError):
+                pass
+            return {"type": "command", "action": "update_param", "param": param, "value": value}
+        # Toggle/Option → toggle_param con bool/string
+        return {"type": "command", "action": "toggle_param", "param": param, "value": value}
 
-    def send_unity_message(self, msg):
-        try:
-            v = self._to_unity_value(list(msg.values())[0])
-            k = list(msg.keys())[0]
-            self.ws.send(json.dumps({k: v}))
-            #json_message = json.dumps(msg)
-            #self.output_socket.sendall(json_message.encode('utf-8'))
-            #print(f"Sent message: {json_message}")
-            print(f"Sent WS message: {msg}")
-        except Exception as e:
-            print(f"Error while sending message: {e}")
-            #self.output_socket.close()
-            self.ws.close()
+    def send_to_unity(self, param, value):
+        payload = self._build_command(param, value)
+        self._ws_safe_send(payload)
 
     def save_json_history(self, session_id):
-        with open(f'session_{session_id}.json', 'w') as f:
-            json.dump(self.state_history, f, indent=4)
+        with open(f'session_{session_id}.json', 'w', encoding='utf-8') as f:
+            json.dump(self.state_history, f, indent=4, ensure_ascii=False)
         print(f"End data saved to session_{session_id}.json")
 
     def launch_session(self, session_id):
@@ -88,20 +150,34 @@ class Agent:
                 data = self.listen()
                 print(self.step)
                 if data == END_SIGNAL:
-                    print("recieved end signal, shutting down Agent")
-                    self.send_unity_message({"msg" : END_SIGNAL})
-                    break   
-                message, state =  self.session.map_state((data.get("emotional_state")['valence'], data.get("emotional_state")["arousal"]), self.step)
-                print(message)
+                    print("received end signal, shutting down Agent")
+                    # opzionale: notifica di fine
+                    self._ws_safe_send({"type": "command", "action": "toggle_param", "param": "msg", "value": END_SIGNAL})
+                    break
+
+                # La Session deve restituire: message: dict {param: value}, state: dataclass
+                message, state = self.session.map_state(
+                    (data.get("emotional_state")["valence"], data.get("emotional_state")["arousal"]),
+                    self.step
+                )
+                print("mapped message:", message)
                 self.save_state(data, state)
+
                 for key, value in message.items():
-                    self.send_unity_message({key: value})
+                    self.send_to_unity(key, value)
+
                 self.step += 1
         finally:
             self.save_json_history(session_id)
-            self.input_socket.close()
-            #self.output_socket.close()
-            self.ws.close()
+            try:
+                self.input_socket.close()
+            except Exception:
+                pass
+            try:
+                if self.ws:
+                    self.ws.close()
+            except Exception:
+                pass
 
 if __name__ == "__main__":
     session_id = "session1"

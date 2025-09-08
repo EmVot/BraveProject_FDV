@@ -9,7 +9,7 @@
         "unity_state": {
             "exposure": 9.0,
             "rain": 0.0,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -21,12 +21,12 @@
             "valence": 0.51533799292984,
             "arousal": -0.48509154859952
         },
-        "patient_transcript": "Honestly? I feel pretty calm. It\u00e2\u20ac\u2122s bright out there, and I don\u00e2\u20ac\u2122t feel the usual tension in my chest yet.\n",
+        "patient_transcript": "Honestly? I feel pretty calm. Itâ€™s bright out there, and I donâ€™t feel the usual tension in my chest yet.\n",
         "therapist_transcript": "Good.\n",
         "unity_state": {
             "exposure": 9.0,
             "rain": 0.0,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -43,7 +43,7 @@
         "unity_state": {
             "exposure": 9.0,
             "rain": 0.0,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -60,7 +60,7 @@
         "unity_state": {
             "exposure": 9.0,
             "rain": 0.0,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -77,7 +77,7 @@
         "unity_state": {
             "exposure": 9.0,
             "rain": 0.0,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -94,7 +94,7 @@
         "unity_state": {
             "exposure": 9.5,
             "rain": 0.0,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -106,12 +106,12 @@
             "valence": -0.260336,
             "arousal": 0.14666933333333335
         },
-        "patient_transcript": "Okay\u00e2\u20ac\u00a6 did it just get darker? I hear rain. Is that part of the simulation?\n",
-        "therapist_transcript": "Yes, you\u00e2\u20ac\u2122re noticing it correctly. Light rain has started outside the window. Just like in a real flight, the weather can shift gently. But inside this cabin, nothing\u00e2\u20ac\u2122s changed\u00e2\u20ac\u201dyour space is still stable.\n",
+        "patient_transcript": "Okayâ€¦ did it just get darker? I hear rain. Is that part of the simulation?\n",
+        "therapist_transcript": "Yes, youâ€™re noticing it correctly. Light rain has started outside the window. Just like in a real flight, the weather can shift gently. But inside this cabin, nothingâ€™s changedâ€”your space is still stable.\n",
         "unity_state": {
             "exposure": 9.5,
             "rain": 0.0,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -123,12 +123,12 @@
             "valence": -0.20400200000000002,
             "arousal": 0.026668666666666674
         },
-        "patient_transcript": "Right\u00e2\u20ac\u00a6 I know that. But part of me still thinks, 'what if this means something worse is coming?'\n",
-        "therapist_transcript": "That\u00e2\u20ac\u2122s a powerful insight. That \u00e2\u20ac\u02dcwhat if\u00e2\u20ac\u2122 voice is old wiring. But right now, you have new tools. \n",
+        "patient_transcript": "Rightâ€¦ I know that. But part of me still thinks, 'what if this means something worse is coming?'\n",
+        "therapist_transcript": "Thatâ€™s a powerful insight. That â€˜what ifâ€™ voice is old wiring. But right now, you have new tools. \n",
         "unity_state": {
             "exposure": 9.5,
             "rain": 0.0,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -141,11 +141,11 @@
             "arousal": -0.09333200000000003
         },
         "patient_transcript": "-\n",
-        "therapist_transcript": "Let\u00e2\u20ac\u2122s take one breath together\u00e2\u20ac\u201ddeep in\u00e2\u20ac\u00a6 and out slowly. We\u00e2\u20ac\u2122re not rushing forward. You\u00e2\u20ac\u2122re still in control.\n",
+        "therapist_transcript": "Letâ€™s take one breath togetherâ€”deep inâ€¦ and out slowly. Weâ€™re not rushing forward. Youâ€™re still in control.\n",
         "unity_state": {
             "exposure": 9.5,
             "rain": 0.0,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -162,7 +162,7 @@
         "unity_state": {
             "exposure": 9.5,
             "rain": 0.0,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -179,7 +179,7 @@
         "unity_state": {
             "exposure": 10.5,
             "rain": 1000,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -196,7 +196,7 @@
         "unity_state": {
             "exposure": 10.5,
             "rain": 1000,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -208,12 +208,12 @@
             "valence": -0.051000000000000004,
             "arousal": 0.15933200000000003
         },
-        "patient_transcript": "The rain\u00e2\u20ac\u2122s really coming down now... I know it\u00e2\u20ac\u2122s fake, but it\u00e2\u20ac\u2122s starting to feel real. It\u00e2\u20ac\u2122s reminding me of that flight I had where we got stuck circling for an hour.\n",
-        "therapist_transcript": "I hear you. That memory is loud right now. Let\u00e2\u20ac\u2122s acknowledge it\u00e2\u20ac\u201dyour mind is connecting this scene with that past discomfort. But here and now, you\u00e2\u20ac\u2122re safe. This is not that flight.\n",
+        "patient_transcript": "The rainâ€™s really coming down now... I know itâ€™s fake, but itâ€™s starting to feel real. Itâ€™s reminding me of that flight I had where we got stuck circling for an hour.\n",
+        "therapist_transcript": "I hear you. That memory is loud right now. Letâ€™s acknowledge itâ€”your mind is connecting this scene with that past discomfort. But here and now, youâ€™re safe. This is not that flight.\n",
         "unity_state": {
             "exposure": 10.5,
             "rain": 1000,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -230,7 +230,7 @@
         "unity_state": {
             "exposure": 10.5,
             "rain": 1000,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -242,12 +242,12 @@
             "valence": -0.067,
             "arousal": 0.6519973333333333
         },
-        "patient_transcript": "Yeah, I get that logically\u00e2\u20ac\u00a6 but I can already feel my shoulders tensing up, and I\u00e2\u20ac\u2122m bracing\u00e2\u20ac\u201dlike waiting for something worse.\n",
-        "therapist_transcript": "Let\u00e2\u20ac\u2122s work with that feeling, not against it. Shift your awareness to your breath for a moment. Notice the tension in your shoulders without trying to fix it. Just observe.\n",
+        "patient_transcript": "Yeah, I get that logicallyâ€¦ but I can already feel my shoulders tensing up, and Iâ€™m bracingâ€”like waiting for something worse.\n",
+        "therapist_transcript": "Letâ€™s work with that feeling, not against it. Shift your awareness to your breath for a moment. Notice the tension in your shoulders without trying to fix it. Just observe.\n",
         "unity_state": {
             "exposure": 10.5,
             "rain": 1000,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -260,11 +260,11 @@
             "arousal": 0.89833
         },
         "patient_transcript": "<BREATHE>\n",
-        "therapist_transcript": "You\u00e2\u20ac\u2122re not in danger\u00e2\u20ac\u201dyou\u00e2\u20ac\u2122re in training. You\u00e2\u20ac\u2122re rewiring your response one breath at a time.\n",
+        "therapist_transcript": "Youâ€™re not in dangerâ€”youâ€™re in training. Youâ€™re rewiring your response one breath at a time.\n",
         "unity_state": {
             "exposure": 12.0,
             "rain": 10000,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.003,
             "rumbling": false,
             "oxygenMasks": false,
@@ -276,12 +276,12 @@
             "valence": -0.14,
             "arousal": 0.8753299999999999
         },
-        "patient_transcript": "It\u00e2\u20ac\u2122s hard, but I\u00e2\u20ac\u2122m still here. That\u00e2\u20ac\u2122s something, right?\n",
-        "therapist_transcript": "You\u00e2\u20ac\u2122re doing exactly what this therapy is about\u00e2\u20ac\u201dstaying with the discomfort, not running from it.\n",
+        "patient_transcript": "Itâ€™s hard, but Iâ€™m still here. Thatâ€™s something, right?\n",
+        "therapist_transcript": "Youâ€™re doing exactly what this therapy is aboutâ€”staying with the discomfort, not running from it.\n",
         "unity_state": {
             "exposure": 12.0,
             "rain": 10000,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.003,
             "rumbling": false,
             "oxygenMasks": false,
@@ -294,11 +294,11 @@
             "arousal": 0.8523299999999999
         },
         "patient_transcript": "-\n",
-        "therapist_transcript": "And now, we\u00e2\u20ac\u2122re going to take one more step together. It might feel harder, but remember: you're not alone, and nothing here can harm you.\n",
+        "therapist_transcript": "And now, weâ€™re going to take one more step together. It might feel harder, but remember: you're not alone, and nothing here can harm you.\n",
         "unity_state": {
             "exposure": 12.0,
             "rain": 10000,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.003,
             "rumbling": false,
             "oxygenMasks": false,
@@ -315,7 +315,7 @@
         "unity_state": {
             "exposure": 12.0,
             "rain": 10000,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.003,
             "rumbling": false,
             "oxygenMasks": false,
@@ -332,7 +332,7 @@
         "unity_state": {
             "exposure": 12.0,
             "rain": 10000,
-            "lightning": false,
+            "flash": false,
             "turbolence": 0.003,
             "rumbling": false,
             "oxygenMasks": false,
@@ -344,12 +344,12 @@
             "valence": -0.4,
             "arousal": 0.78333
         },
-        "patient_transcript": "Oh God\u00e2\u20ac\u00a6 the lightning! This is exactly what I dread. What if something goes wrong? I can\u00e2\u20ac\u2122t handle this!\n",
-        "therapist_transcript": "This feels really intense right now, and that\u00e2\u20ac\u2122s okay. Your body is responding exactly as it should when faced with perceived danger. Let\u00e2\u20ac\u2122s focus on your breath\u00e2\u20ac\u201dslow, steady.\n",
+        "patient_transcript": "Oh Godâ€¦ the lightning! This is exactly what I dread. What if something goes wrong? I canâ€™t handle this!\n",
+        "therapist_transcript": "This feels really intense right now, and thatâ€™s okay. Your body is responding exactly as it should when faced with perceived danger. Letâ€™s focus on your breathâ€”slow, steady.\n",
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": true,
             "turbolence": 0.01,
             "rumbling": true,
             "oxygenMasks": false,
@@ -362,11 +362,11 @@
             "arousal": 0.7383299999999999
         },
         "patient_transcript": "-\n",
-        "therapist_transcript": "You\u00e2\u20ac\u2122re in the room with me, and this storm is just a part of the simulation, designed to help you get stronger.\n",
+        "therapist_transcript": "Youâ€™re in the room with me, and this storm is just a part of the simulation, designed to help you get stronger.\n",
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.01,
             "rumbling": true,
             "oxygenMasks": false,
@@ -378,12 +378,12 @@
             "valence": -0.522,
             "arousal": 0.69333
         },
-        "patient_transcript": "It feels so real though. I\u00e2\u20ac\u2122m starting to shake.\n",
-        "therapist_transcript": "That shaking is your nervous system releasing tension. It\u00e2\u20ac\u2122s a sign you\u00e2\u20ac\u2122re alive and working through your fear. \n",
+        "patient_transcript": "It feels so real though. Iâ€™m starting to shake.\n",
+        "therapist_transcript": "That shaking is your nervous system releasing tension. Itâ€™s a sign youâ€™re alive and working through your fear. \n",
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.01,
             "rumbling": true,
             "oxygenMasks": false,
@@ -396,11 +396,11 @@
             "arousal": 0.64833
         },
         "patient_transcript": "-\n",
-        "therapist_transcript": "Stay with me. We\u00e2\u20ac\u2122re safe here. I\u00e2\u20ac\u2122ll guide you through it. You\u00e2\u20ac\u2122ve faced this before, and you\u00e2\u20ac\u2122ve stayed present. You can do it again.\n",
+        "therapist_transcript": "Stay with me. Weâ€™re safe here. Iâ€™ll guide you through it. Youâ€™ve faced this before, and youâ€™ve stayed present. You can do it again.\n",
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.01,
             "rumbling": true,
             "oxygenMasks": false,
@@ -417,7 +417,7 @@
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.01,
             "rumbling": true,
             "oxygenMasks": false,
@@ -429,12 +429,12 @@
             "valence": -0.705,
             "arousal": 0.55833
         },
-        "patient_transcript": "I\u00e2\u20ac\u2122m terrified... my heart\u00e2\u20ac\u2122s racing, but I\u00e2\u20ac\u2122m trying not to panic. It feels so real\u00e2\u20ac\u201dI don\u00e2\u20ac\u2122t know if I can do this\n",
-        "therapist_transcript": "Alex, I know this feels overwhelming right now, but remember\u00e2\u20ac\u201dyou\u00e2\u20ac\u2122re safe and supported. The masks are part of the simulation to help your brain get used to uncertainty.\n",
+        "patient_transcript": "Iâ€™m terrified... my heartâ€™s racing, but Iâ€™m trying not to panic. It feels so realâ€”I donâ€™t know if I can do this\n",
+        "therapist_transcript": "Alex, I know this feels overwhelming right now, but rememberâ€”youâ€™re safe and supported. The masks are part of the simulation to help your brain get used to uncertainty.\n",
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.015,
             "rumbling": true,
             "oxygenMasks": true,
@@ -447,11 +447,11 @@
             "arousal": 0.56633
         },
         "patient_transcript": "-\n",
-        "therapist_transcript": "Focus on your breath with me\u00e2\u20ac\u201dslow and steady\u00e2\u20ac\u201dand feel the strength you\u00e2\u20ac\u2122ve built to face this moment.\n",
+        "therapist_transcript": "Focus on your breath with meâ€”slow and steadyâ€”and feel the strength youâ€™ve built to face this moment.\n",
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.015,
             "rumbling": true,
             "oxygenMasks": true,
@@ -468,7 +468,7 @@
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.015,
             "rumbling": true,
             "oxygenMasks": true,
@@ -485,7 +485,7 @@
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.015,
             "rumbling": true,
             "oxygenMasks": true,
@@ -502,7 +502,7 @@
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.015,
             "rumbling": true,
             "oxygenMasks": true,
@@ -514,12 +514,12 @@
             "valence": -0.695,
             "arousal": 0.59833
         },
-        "patient_transcript": "I\u00e2\u20ac\u2122m still shaking\u00e2\u20ac\u00a6 I can\u00e2\u20ac\u2122t shake this feeling. The rain and lightning are still out there, and it feels like the danger hasn\u00e2\u20ac\u2122t passed.\n",
-        "therapist_transcript": "It\u00e2\u20ac\u2122s okay to feel distressed, Alex. Your mind is still on high alert, but notice how the plane is steadier now, the lights have stopped blinking. The storm is less intense than before, even if it\u00e2\u20ac\u2122s still visible.\n",
+        "patient_transcript": "Iâ€™m still shakingâ€¦ I canâ€™t shake this feeling. The rain and lightning are still out there, and it feels like the danger hasnâ€™t passed.\n",
+        "therapist_transcript": "Itâ€™s okay to feel distressed, Alex. Your mind is still on high alert, but notice how the plane is steadier now, the lights have stopped blinking. The storm is less intense than before, even if itâ€™s still visible.\n",
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.01,
             "rumbling": true,
             "oxygenMasks": true,
@@ -532,11 +532,11 @@
             "arousal": 0.60997380924286
         },
         "patient_transcript": "-\n",
-        "therapist_transcript": "Let\u00e2\u20ac\u2122s focus on what\u00e2\u20ac\u2122s here, what\u00e2\u20ac\u2122s real right now. You\u00e2\u20ac\u2122re safe in this moment, and I\u00e2\u20ac\u2122m right here with you. Breathe.\n",
+        "therapist_transcript": "Letâ€™s focus on whatâ€™s here, whatâ€™s real right now. Youâ€™re safe in this moment, and Iâ€™m right here with you. Breathe.\n",
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.01,
             "rumbling": true,
             "oxygenMasks": true,
@@ -553,7 +553,7 @@
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.01,
             "rumbling": true,
             "oxygenMasks": true,
@@ -570,7 +570,7 @@
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.01,
             "rumbling": true,
             "oxygenMasks": true,
@@ -587,7 +587,7 @@
         "unity_state": {
             "exposure": 12.0,
             "rain": 20000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.01,
             "rumbling": true,
             "oxygenMasks": true,
@@ -604,7 +604,7 @@
         "unity_state": {
             "exposure": 11.5,
             "rain": 15000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.005,
             "rumbling": true,
             "oxygenMasks": true,
@@ -621,7 +621,7 @@
         "unity_state": {
             "exposure": 11.5,
             "rain": 15000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.005,
             "rumbling": true,
             "oxygenMasks": true,
@@ -638,7 +638,7 @@
         "unity_state": {
             "exposure": 11.5,
             "rain": 15000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.005,
             "rumbling": true,
             "oxygenMasks": true,
@@ -655,7 +655,7 @@
         "unity_state": {
             "exposure": 11.5,
             "rain": 15000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.005,
             "rumbling": true,
             "oxygenMasks": true,
@@ -672,7 +672,7 @@
         "unity_state": {
             "exposure": 11.5,
             "rain": 15000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.005,
             "rumbling": true,
             "oxygenMasks": true,
@@ -689,7 +689,7 @@
         "unity_state": {
             "exposure": 10.5,
             "rain": 5000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": true,
             "oxygenMasks": false,
@@ -706,7 +706,7 @@
         "unity_state": {
             "exposure": 10.5,
             "rain": 5000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": true,
             "oxygenMasks": false,
@@ -723,7 +723,7 @@
         "unity_state": {
             "exposure": 10.5,
             "rain": 5000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": true,
             "oxygenMasks": false,
@@ -735,12 +735,12 @@
             "valence": -0.18786546677945998,
             "arousal": 0.8449885383253
         },
-        "patient_transcript": "Yeah, it\u00e2\u20ac\u2122s calmer now\u00e2\u20ac\u00a6 but honestly, I feel kind of bitter. Like, why do I have to put myself through this? It\u00e2\u20ac\u2122s exhausting.\n",
-        "therapist_transcript": "That\u00e2\u20ac\u2122s completely valid, Alex. Facing fear isn\u00e2\u20ac\u2122t easy, and it\u00e2\u20ac\u2122s normal to feel frustrated or tired after pushing through so much.\n",
+        "patient_transcript": "Yeah, itâ€™s calmer nowâ€¦ but honestly, I feel kind of bitter. Like, why do I have to put myself through this? Itâ€™s exhausting.\n",
+        "therapist_transcript": "Thatâ€™s completely valid, Alex. Facing fear isnâ€™t easy, and itâ€™s normal to feel frustrated or tired after pushing through so much.\n",
         "unity_state": {
             "exposure": 10.5,
             "rain": 5000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": true,
             "oxygenMasks": false,
@@ -753,11 +753,11 @@
             "arousal": 0.8479664346597
         },
         "patient_transcript": "-\n",
-        "therapist_transcript": "This bitterness shows how real this struggle is for you. Remember, every step you take here is rewiring those old fears, even if it doesn\u00e2\u20ac\u2122t feel good right now.\n",
+        "therapist_transcript": "This bitterness shows how real this struggle is for you. Remember, every step you take here is rewiring those old fears, even if it doesnâ€™t feel good right now.\n",
         "unity_state": {
             "exposure": 10.5,
             "rain": 5000,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": true,
             "oxygenMasks": false,
@@ -774,7 +774,7 @@
         "unity_state": {
             "exposure": 9.0,
             "rain": 0,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -791,7 +791,7 @@
         "unity_state": {
             "exposure": 9.0,
             "rain": 0,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -808,7 +808,7 @@
         "unity_state": {
             "exposure": 9.0,
             "rain": 0,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -825,7 +825,7 @@
         "unity_state": {
             "exposure": 9.0,
             "rain": 0,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -842,7 +842,7 @@
         "unity_state": {
             "exposure": 9.0,
             "rain": 0,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,
@@ -859,7 +859,7 @@
         "unity_state": {
             "exposure": 9.0,
             "rain": 0,
-            "lightning": true,
+            "flash": false,
             "turbolence": 0.0,
             "rumbling": false,
             "oxygenMasks": false,

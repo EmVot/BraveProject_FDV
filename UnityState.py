@@ -56,7 +56,7 @@ END_SIGNAL = "end"
 class UnityState:
     exposure: float = 0.0 #r:9-12, s:0.1
     rain: float = 0.0 #r:0-2e4 s:100
-    lightning: bool = False
+    flash: bool = False
     turbolence: float = 0.0  # r:0-0.015 s:0.001
     rumbling: bool = False
     oxygenMasks: bool = False
@@ -66,14 +66,14 @@ class UnityState:
     def __init__(self,
                     exposure: float = 9.0,
                     rain: float = 0.0,
-                    lightning: bool = False,
+                    flash: bool = False,
                     turbolence: float = 0.0,
                     rumbling: bool = False,
                     oxygenMasks: bool = False,
                     voices = 'calm',
                     ):
         self.rain = rain
-        self.lightning = lightning
+        self.flash = flash
         self.exposure = exposure
         self.oxygenMasks = oxygenMasks
         self.turbolence = turbolence

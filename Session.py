@@ -97,20 +97,20 @@ class Session1(Session):
                 return message, self._unity_state
             case 20: #5
                 print("case 3 (4)")
-                self._unity_state.lightning = True
+                self._unity_state.flash = True
                 self._unity_state.rain = 20000
                 self._unity_state.rumbling = True
                 self._unity_state.turbolence = 0.010
                 message = {
                     "rain": self._unity_state.rain,
-                    "lightning": self._unity_state.lightning,
+                    "flash": self._unity_state.flash,
                     "rumbling": self._unity_state.rumbling,
                     "turbolence": self._unity_state.turbolence
                 }
                 return message, self._unity_state
-            #case 21:
-                #self._unity_state.lightning = False
-                #return {}, self._unity_state
+            case 21:
+                self._unity_state.flash = False
+                return {}, self._unity_state
             case 25:
                 self._unity_state.turbolence = 0.015
                 self._unity_state.voices = "panic"

@@ -6,7 +6,7 @@ import numpy as np
 
 HOST = '127.0.0.1'
 OUT_PORT = 5060
-SCENARIO_STEP = 0.5 #seconds between scenario shift
+SCENARIO_STEP = 2.0 #seconds between scenario shift
 
 @dataclass
 class EmotionalState:
