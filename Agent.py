@@ -4,6 +4,7 @@ import time
 from dataclasses import asdict
 from websocket import create_connection, WebSocketConnectionClosedException
 from Session import Session, Session1
+from UnityState import UnityState
 
 HOST = "127.0.0.1"
 UNITY_WS_PORT = 8080   # server WS di Unity
@@ -35,6 +36,9 @@ class Agent:
         self.connection, self.addr = self.input_socket.accept()
         print(f"Connection from {self.addr}")
         print("Connection established, waiting for messages...")
+        # self.output_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # self.output_socket.connect((HOST, OUT_PORT))
+        # print("Connected to Unity")
 
     # ---------- Connessione/reconnessione WS ----------
 
@@ -169,19 +173,26 @@ class Agent:
                 self.step += 1
         finally:
             self.save_json_history(session_id)
-            try:
-                self.input_socket.close()
-            except Exception:
-                pass
-            try:
-                if self.ws:
-                    self.ws.close()
-            except Exception:
-                pass
+            self.input_socket.close()
+            self.output_socket.close()
+            #self.ws.close()
+
+    def execute_json_session(self, session_file):
+        with open(session_file, 'r') as f:
+            session_data = json.load(f)
+        unity_state = UnityState()
+        for step, state in session_data.items():
+            print(f"Step: {step}, State: {state}")
+            for key, value in state['unity_state'].items():
+                if getattr(unity_state, key) != value:
+                    self.send_unity_message({key: value})
+                    setattr(unity_state, key, value)
+            time.sleep(1) 
 
 if __name__ == "__main__":
     session_id = "session1"
     Session.register(session_id, Session1)
     agent = Agent()
-    agent.launch_session(session_id)
-    print("Agent session ended")
+    # agent.launch_session(session_id)
+    # print("Agent session ended")
+    agent.execute_json_session('synthetic_session1.json')

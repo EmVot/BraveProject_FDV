@@ -1,0 +1,869 @@
+{
+    "0": {
+    "emotional_state": {
+    "valence": 0.62,
+    "arousal": -0.58
+    },
+    "patient_transcript": "Maybe a 3–4. Hard to read it yet.",
+    "therapist_transcript": "That’s fine. Feel the seat and let the exhale be a touch longer.",
+    "unity_state": {
+    "exposure": 9.0,
+    "rain": 0,
+    "lightning": false,
+    "turbolence": 0.0,
+    "rumbling": false,
+    "oxygenMasks": false,
+    "voices": "calm"
+    }
+    },
+    "1": {
+    "emotional_state": {
+    "valence": 0.55,
+    "arousal": -0.5
+    },
+    "patient_transcript": "The cabin sounds normal.",
+    "therapist_transcript": "Notice the hum and your feet on the floor.",
+    "unity_state": {
+    "exposure": 9.0,
+    "rain": 0,
+    "lightning": false,
+    "turbolence": 0.0,
+    "rumbling": false,
+    "oxygenMasks": false,
+    "voices": "calm"
+    }
+    },
+    "2": {
+    "emotional_state": {
+    "valence": 0.42,
+    "arousal": -0.4
+    },
+    "patient_transcript": "A little tight but okay.",
+    "therapist_transcript": "Label it ‘tight and safe.’ Keep breathing low and slow.",
+    "unity_state": {
+    "exposure": 9.0,
+    "rain": 0,
+    "lightning": false,
+    "turbolence": 0.0,
+    "rumbling": false,
+    "oxygenMasks": false,
+    "voices": "calm"
+    }
+    },
+    "3": {
+    "emotional_state": {
+    "valence": 0.28,
+    "arousal": -0.3
+    },
+    "patient_transcript": "I can follow your voice.",
+    "therapist_transcript": "Good. Let your shoulders drop one notch on the exhale.",
+    "unity_state": {
+    "exposure": 9.0,
+    "rain": 0,
+    "lightning": false,
+    "turbolence": 0.0,
+    "rumbling": false,
+    "oxygenMasks": false,
+    "voices": "calm"
+    }
+    },
+    "4": {
+    "emotional_state": {
+    "valence": 0.15,
+    "arousal": -0.22
+    },
+    "patient_transcript": "It looks a bit dimmer.",
+    "therapist_transcript": "Name it ‘dimmer light.’ Feet—seat—breath.",
+    "unity_state": {
+    "exposure": 9.0,
+    "rain": 0,
+    "lightning": false,
+    "turbolence": 0.0,
+    "rumbling": false,
+    "oxygenMasks": false,
+    "voices": "calm"
+    }
+    },
+    "5": {
+    "emotional_state": {
+    "valence": 0.05,
+    "arousal": -0.14
+    },
+    "patient_transcript": "Still manageable.",
+    "therapist_transcript": "Great. We’ll nudge the scene a little.",
+    "unity_state": {
+    "exposure": 9.5,
+    "rain": 2000,
+    "lightning": false,
+    "turbolence": 0.002,
+    "rumbling": false,
+    "oxygenMasks": false,
+    "voices": "calm"
+    }
+    },
+    "6": {
+    "emotional_state": {
+    "valence": -0.05,
+    "arousal": 0.05
+    },
+    "patient_transcript": "I notice a shift.",
+    "therapist_transcript": "Good noticing. Keep the out-breath longer than the in-breath.",
+    "unity_state": {
+    "exposure": 9.5,
+    "rain": 2000,
+    "lightning": false,
+    "turbolence": 0.002,
+    "rumbling": false,
+    "oxygenMasks": false,
+    "voices": "calm"
+    }
+    },
+    "7": {
+    "emotional_state": {
+    "valence": -0.12,
+    "arousal": 0.18
+    },
+    "patient_transcript": "Alertness went up.",
+    "therapist_transcript": "Let alertness ride along while you breathe slow and wide.",
+    "unity_state": {
+    "exposure": 9.5,
+    "rain": 2000,
+    "lightning": false,
+    "turbolence": 0.002,
+    "rumbling": false,
+    "oxygenMasks": false,
+    "voices": "calm"
+    }
+    },
+    "8": {
+    "emotional_state": {
+    "valence": -0.22,
+    "arousal": 0.35
+    },
+    "patient_transcript": "That bump got my attention.",
+    "therapist_transcript": "Say ‘real and safe.’ Keep your exhale slow.",
+    "unity_state": {
+    "exposure": 10.5,
+    "rain": 10000,
+    "lightning": false,
+    "turbolence": 0.006,
+    "rumbling": true,
+    "oxygenMasks": false,
+    "voices": "worried"
+    }
+    },
+    "9": {
+    "emotional_state": {
+    "valence": -0.3,
+    "arousal": 0.48
+    },
+    "patient_transcript": "Grip’s back on the armrest.",
+    "therapist_transcript": "Soften your hands one notch. Feet—seat—breath.",
+    "unity_state": {
+    "exposure": 10.5,
+    "rain": 10000,
+    "lightning": false,
+    "turbolence": 0.006,
+    "rumbling": true,
+    "oxygenMasks": false,
+    "voices": "worried"
+    }
+    },
+    "10": {
+    "emotional_state": {
+    "valence": -0.38,
+    "arousal": 0.56
+    },
+    "patient_transcript": "Voices sound tense.",
+    "therapist_transcript": "Notice that cue and come back to the long out-breath.",
+    "unity_state": {
+    "exposure": 10.5,
+    "rain": 10000,
+    "lightning": false,
+    "turbolence": 0.006,
+    "rumbling": true,
+    "oxygenMasks": false,
+    "voices": "worried"
+    }
+    },
+    "11": {
+    "emotional_state": {
+    "valence": -0.55,
+    "arousal": 0.72
+    },
+    "patient_transcript": "Now I’m really anxious.",
+    "therapist_transcript": "Afraid and able—both true. Stay with me.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "12": {
+    "emotional_state": {
+    "valence": -0.62,
+    "arousal": 0.75
+    },
+    "patient_transcript": "Lightning! That spiked me.",
+    "therapist_transcript": "Startle is normal. In for four, out for six with me.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": true,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "13": {
+    "emotional_state": {
+    "valence": -0.64,
+    "arousal": 0.74
+    },
+    "patient_transcript": "Still way up there.",
+    "therapist_transcript": "Good—stay present. Feet press down as you exhale.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "14": {
+    "emotional_state": {
+    "valence": -0.67,
+    "arousal": 0.73
+    },
+    "patient_transcript": "Feels like a drop.",
+    "therapist_transcript": "Name it ‘dropping story’ and return to breath.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "15": {
+    "emotional_state": {
+    "valence": -0.7,
+    "arousal": 0.71
+    },
+    "patient_transcript": "I want out!",
+    "therapist_transcript": "Urge to escape is loud—let it be there while you breathe.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "16": {
+    "emotional_state": {
+    "valence": -0.72,
+    "arousal": 0.68
+    },
+    "patient_transcript": "Chest is tight.",
+    "therapist_transcript": "Let tightness ride the wave of each exhale.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "17": {
+    "emotional_state": {
+    "valence": -0.74,
+    "arousal": 0.66
+    },
+    "patient_transcript": "Still very high.",
+    "therapist_transcript": "You’re doing it—staying with safe discomfort.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "18": {
+    "emotional_state": {
+    "valence": -0.75,
+    "arousal": 0.65
+    },
+    "patient_transcript": "I can barely think.",
+    "therapist_transcript": "That’s okay. Borrow my voice—slow exhale, steady pace.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "19": {
+    "emotional_state": {
+    "valence": -0.76,
+    "arousal": 0.64
+    },
+    "patient_transcript": "Still bracing everywhere.",
+    "therapist_transcript": "Notice ‘bracing’ and unclench the jaw one notch.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "20": {
+    "emotional_state": {
+    "valence": -0.77,
+    "arousal": 0.63
+    },
+    "patient_transcript": "Another flash!",
+    "therapist_transcript": "Yes—startle, then breath back in rhythm.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": true,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "21": {
+    "emotional_state": {
+    "valence": -0.76,
+    "arousal": 0.62
+    },
+    "patient_transcript": "It’s slightly less, but still awful.",
+    "therapist_transcript": "Slightly less counts. Keep the long out-breath.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "22": {
+    "emotional_state": {
+    "valence": -0.74,
+    "arousal": 0.63
+    },
+    "patient_transcript": "Hands buzzing.",
+    "therapist_transcript": "Let them buzz—energy moving through is safe.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "23": {
+    "emotional_state": {
+    "valence": -0.72,
+    "arousal": 0.64
+    },
+    "patient_transcript": "Still high.",
+    "therapist_transcript": "You’re riding it. Feet press down as you exhale.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "24": {
+    "emotional_state": {
+    "valence": -0.73,
+    "arousal": 0.64
+    },
+    "patient_transcript": "I’m trying to focus on you.",
+    "therapist_transcript": "That’s capacity. Stay with the count: in 4, out 6.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "panic"
+    }
+    },
+    "25": {
+    "emotional_state": {
+    "valence": -0.71,
+    "arousal": 0.62
+    },
+    "patient_transcript": "Still intense, but I’m here.",
+    "therapist_transcript": "Exactly—afraid and staying. That’s the work.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "26": {
+    "emotional_state": {
+    "valence": -0.7,
+    "arousal": 0.61
+    },
+    "patient_transcript": "Breathing is a tiny bit smoother.",
+    "therapist_transcript": "Notice that micro-shift and keep going.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "27": {
+    "emotional_state": {
+    "valence": -0.69,
+    "arousal": 0.62
+    },
+    "patient_transcript": "Still scared.",
+    "therapist_transcript": "Scared and safe—let both be true.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "28": {
+    "emotional_state": {
+    "valence": -0.7,
+    "arousal": 0.64
+    },
+    "patient_transcript": "Another jolt!",
+    "therapist_transcript": "Ride the startle—back to the counting breath.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": true,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "29": {
+    "emotional_state": {
+    "valence": -0.69,
+    "arousal": 0.63
+    },
+    "patient_transcript": "Okay—still here.",
+    "therapist_transcript": "Exactly. ‘Still here’ is progress.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "30": {
+    "emotional_state": {
+    "valence": -0.68,
+    "arousal": 0.62
+    },
+    "patient_transcript": "I can hear you better.",
+    "therapist_transcript": "Good—keep the exhale unhurried and smooth.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "31": {
+    "emotional_state": {
+    "valence": -0.67,
+    "arousal": 0.61
+    },
+    "patient_transcript": "Less holding in my chest.",
+    "therapist_transcript": "Let the shoulders follow—down one notch.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "32": {
+    "emotional_state": {
+    "valence": -0.68,
+    "arousal": 0.6
+    },
+    "patient_transcript": "Still intense, not worse.",
+    "therapist_transcript": "Holding steady is learning. Stay with it.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "33": {
+    "emotional_state": {
+    "valence": -0.69,
+    "arousal": 0.59
+    },
+    "patient_transcript": "Breath is a bit more even.",
+    "therapist_transcript": "Nice micro-gain. Keep counting the exhales.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "34": {
+    "emotional_state": {
+    "valence": -0.68,
+    "arousal": 0.58
+    },
+    "patient_transcript": "I can stay with this for now.",
+    "therapist_transcript": "That’s a strong rep. We’ll start easing soon.",
+    "unity_state": {
+    "exposure": 12.0,
+    "rain": 20000,
+    "lightning": false,
+    "turbolence": 0.015,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "35": {
+    "emotional_state": {
+    "valence": -0.66,
+    "arousal": 0.56
+    },
+    "patient_transcript": "It’s still loud in my body.",
+    "therapist_transcript": "We’ll dial it down a notch—stay with the exhale.",
+    "unity_state": {
+    "exposure": 11.5,
+    "rain": 15000,
+    "lightning": false,
+    "turbolence": 0.01,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "36": {
+    "emotional_state": {
+    "valence": -0.64,
+    "arousal": 0.54
+    },
+    "patient_transcript": "Slightly less intense.",
+    "therapist_transcript": "Notice ‘slightly less’—it matters. Keep breathing.",
+    "unity_state": {
+    "exposure": 11.5,
+    "rain": 15000,
+    "lightning": false,
+    "turbolence": 0.01,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "37": {
+    "emotional_state": {
+    "valence": -0.63,
+    "arousal": 0.53
+    },
+    "patient_transcript": "Still pretty high.",
+    "therapist_transcript": "High and manageable—stay with the anchors.",
+    "unity_state": {
+    "exposure": 11.5,
+    "rain": 15000,
+    "lightning": false,
+    "turbolence": 0.01,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "38": {
+    "emotional_state": {
+    "valence": -0.62,
+    "arousal": 0.52
+    },
+    "patient_transcript": "Breathing helps a bit.",
+    "therapist_transcript": "Let each out-breath be steady and unhurried.",
+    "unity_state": {
+    "exposure": 11.5,
+    "rain": 15000,
+    "lightning": false,
+    "turbolence": 0.01,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "39": {
+    "emotional_state": {
+    "valence": -0.61,
+    "arousal": 0.52
+    },
+    "patient_transcript": "Still tense, but I’m following.",
+    "therapist_transcript": "Good. Keep riding the breath wave.",
+    "unity_state": {
+    "exposure": 11.5,
+    "rain": 15000,
+    "lightning": false,
+    "turbolence": 0.01,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "40": {
+    "emotional_state": {
+    "valence": -0.6,
+    "arousal": 0.5
+    },
+    "patient_transcript": "Feels like it’s easing a notch.",
+    "therapist_transcript": "Exactly. Stay with that easing trend.",
+    "unity_state": {
+    "exposure": 11.5,
+    "rain": 15000,
+    "lightning": false,
+    "turbolence": 0.01,
+    "rumbling": true,
+    "oxygenMasks": true,
+    "voices": "worried"
+    }
+    },
+    "41": {
+    "emotional_state": {
+    "valence": -0.58,
+    "arousal": 0.48
+    },
+    "patient_transcript": "I’m still wired.",
+    "therapist_transcript": "Wired and safe. We’ll step down again.",
+    "unity_state": {
+    "exposure": 10.0,
+    "rain": 8000,
+    "lightning": false,
+    "turbolence": 0.006,
+    "rumbling": true,
+    "oxygenMasks": false,
+    "voices": "worried"
+    }
+    },
+    "42": {
+    "emotional_state": {
+    "valence": -0.57,
+    "arousal": 0.47
+    },
+    "patient_transcript": "Breath is steadier.",
+    "therapist_transcript": "Let the steadiness spread through your shoulders and jaw.",
+    "unity_state": {
+    "exposure": 10.0,
+    "rain": 8000,
+    "lightning": false,
+    "turbolence": 0.006,
+    "rumbling": true,
+    "oxygenMasks": false,
+    "voices": "worried"
+    }
+    },
+    "43": {
+    "emotional_state": {
+    "valence": -0.56,
+    "arousal": 0.46
+    },
+    "patient_transcript": "Still uncomfortable.",
+    "therapist_transcript": "Uncomfortable and functioning—exactly the skill.",
+    "unity_state": {
+    "exposure": 10.0,
+    "rain": 8000,
+    "lightning": false,
+    "turbolence": 0.006,
+    "rumbling": true,
+    "oxygenMasks": false,
+    "voices": "worried"
+    }
+    },
+    "44": {
+    "emotional_state": {
+    "valence": -0.55,
+    "arousal": 0.45
+    },
+    "patient_transcript": "My hands are less clenched.",
+    "therapist_transcript": "Great—keep the exhale long.",
+    "unity_state": {
+    "exposure": 10.0,
+    "rain": 8000,
+    "lightning": false,
+    "turbolence": 0.006,
+    "rumbling": true,
+    "oxygenMasks": false,
+    "voices": "worried"
+    }
+    },
+    "45": {
+    "emotional_state": {
+    "valence": -0.53,
+    "arousal": 0.44
+    },
+    "patient_transcript": "I can think again.",
+    "therapist_transcript": "Good sign. We’ll coast at this level.",
+    "unity_state": {
+    "exposure": 10.0,
+    "rain": 8000,
+    "lightning": false,
+    "turbolence": 0.006,
+    "rumbling": true,
+    "oxygenMasks": false,
+    "voices": "worried"
+    }
+    },
+    "46": {
+    "emotional_state": {
+    "valence": -0.52,
+    "arousal": 0.42
+    },
+    "patient_transcript": "Still alert though.",
+    "therapist_transcript": "Alert is allowed. Keep anchoring to feet and breath.",
+    "unity_state": {
+    "exposure": 10.0,
+    "rain": 8000,
+    "lightning": false,
+    "turbolence": 0.006,
+    "rumbling": true,
+    "oxygenMasks": false,
+    "voices": "calm"
+    }
+    },
+    "47": {
+    "emotional_state": {
+    "valence": -0.5,
+    "arousal": 0.4
+    },
+    "patient_transcript": "Easier to stay with it.",
+    "therapist_transcript": "Let the seat carry your weight fully as you exhale.",
+    "unity_state": {
+    "exposure": 10.0,
+    "rain": 8000,
+    "lightning": false,
+    "turbolence": 0.006,
+    "rumbling": true,
+    "oxygenMasks": false,
+    "voices": "calm"
+    }
+    },
+    "48": {
+    "emotional_state": {
+    "valence": -0.48,
+    "arousal": 0.38
+    },
+    "patient_transcript": "Still not pleasant.",
+    "therapist_transcript": "Not pleasant, still here—strong rep for your system.",
+    "unity_state": {
+    "exposure": 10.0,
+    "rain": 8000,
+    "lightning": false,
+    "turbolence": 0.006,
+    "rumbling": true,
+    "oxygenMasks": false,
+    "voices": "calm"
+    }
+    },
+    "49": {
+    "emotional_state": {
+    "valence": -0.46,
+    "arousal": 0.36
+    },
+    "patient_transcript": "I can stay to the end.",
+    "therapist_transcript": "Excellent. Keep the breath easy and steady.",
+    "unity_state": {
+    "exposure": 10.0,
+    "rain": 8000,
+    "lightning": false,
+    "turbolence": 0.006,
+    "rumbling": true,
+    "oxygenMasks": false,
+    "voices": "calm"
+    }
+    },
+    "50": {
+    "emotional_state": {
+    "valence": -0.44,
+    "arousal": 0.34
+    },
+    "patient_transcript": "Exhausted, but proud I stayed.",
+    "therapist_transcript": "You faced the most extreme level and held on—strong work today.",
+    "unity_state": {
+    "exposure": 10.0,
+    "rain": 8000,
+    "lightning": false,
+    "turbolence": 0.006,
+    "rumbling": true,
+    "oxygenMasks": false,
+    "voices": "calm"
+    }
+    }
+    }
