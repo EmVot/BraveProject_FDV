@@ -33,9 +33,9 @@ class Agent:
         self.input_socket.bind((HOST, IN_PORT))
         self.input_socket.listen(1)
         print(f"Listening on {HOST}:{IN_PORT}...")
-        self.connection, self.addr = self.input_socket.accept()
-        print(f"Connection from {self.addr}")
-        print("Connection established, waiting for messages...")
+        #self.connection, self.addr = self.input_socket.accept()
+        #print(f"Connection from {self.addr}")
+        #print("Connection established, waiting for messages...")
         # self.output_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         # self.output_socket.connect((HOST, OUT_PORT))
         # print("Connected to Unity")
@@ -178,14 +178,16 @@ class Agent:
             #self.ws.close()
 
     def execute_json_session(self, session_file):
+        print("Si apre?????")
         with open(session_file, 'r') as f:
             session_data = json.load(f)
         unity_state = UnityState()
+        print(f"Session data: {session_data}")
         for step, state in session_data.items():
             print(f"Step: {step}, State: {state}")
             for key, value in state['unity_state'].items():
                 if getattr(unity_state, key) != value:
-                    self.send_unity_message({key: value})
+                    self.send_to_unity(key, value)
                     setattr(unity_state, key, value)
             time.sleep(1) 
 
@@ -194,5 +196,5 @@ if __name__ == "__main__":
     Session.register(session_id, Session1)
     agent = Agent()
     # agent.launch_session(session_id)
-    # print("Agent session ended")
-    agent.execute_json_session('synthetic_session1.json')
+    print("Agent session ended")
+    agent.execute_json_session('synthetic_session/synthetic_session_30.json')
