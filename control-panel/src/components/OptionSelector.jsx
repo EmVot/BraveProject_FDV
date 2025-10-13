@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 function OptionSelector({ label, param, options, onChange, forceValue }) {
   const [selected, setSelected] = useState("calm");
 
-  // forza selezione (es. quando darkness < 10.5 → calm)
   useEffect(() => {
     if (forceValue && forceValue !== selected) {
       setSelected(forceValue);
