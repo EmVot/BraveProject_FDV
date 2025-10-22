@@ -185,7 +185,7 @@ class Agent:
             print(f"Step: {step}, State: {state}")
             for key, value in state['unity_state'].items():
                 if getattr(unity_state, key) != value:
-                    self.send_unity_message({key: value})
+                    self.send_to_unity({key: value})
                     setattr(unity_state, key, value)
             time.sleep(1) 
 
