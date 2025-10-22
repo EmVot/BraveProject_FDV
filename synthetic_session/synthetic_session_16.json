@@ -9,7 +9,7 @@
     "unity_state": {
     "exposure": 9.0,
     "rain": 0,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.0,
     "rumbling": false,
     "oxygenMasks": false,
@@ -26,7 +26,7 @@
     "unity_state": {
     "exposure": 9.0,
     "rain": 0,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.0,
     "rumbling": false,
     "oxygenMasks": false,
@@ -43,7 +43,7 @@
     "unity_state": {
     "exposure": 9.0,
     "rain": 0,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.0,
     "rumbling": false,
     "oxygenMasks": false,
@@ -60,7 +60,7 @@
     "unity_state": {
     "exposure": 9.0,
     "rain": 0,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.0,
     "rumbling": false,
     "oxygenMasks": false,
@@ -77,7 +77,7 @@
     "unity_state": {
     "exposure": 9.0,
     "rain": 0,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.0,
     "rumbling": false,
     "oxygenMasks": false,
@@ -94,7 +94,7 @@
     "unity_state": {
     "exposure": 9.5,
     "rain": 2000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.002,
     "rumbling": false,
     "oxygenMasks": false,
@@ -111,7 +111,7 @@
     "unity_state": {
     "exposure": 9.5,
     "rain": 2000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.002,
     "rumbling": false,
     "oxygenMasks": false,
@@ -128,7 +128,7 @@
     "unity_state": {
     "exposure": 9.5,
     "rain": 2000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.002,
     "rumbling": false,
     "oxygenMasks": false,
@@ -145,7 +145,7 @@
     "unity_state": {
     "exposure": 10.5,
     "rain": 10000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.006,
     "rumbling": true,
     "oxygenMasks": false,
@@ -162,7 +162,7 @@
     "unity_state": {
     "exposure": 10.5,
     "rain": 10000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.006,
     "rumbling": true,
     "oxygenMasks": false,
@@ -179,7 +179,7 @@
     "unity_state": {
     "exposure": 10.5,
     "rain": 10000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.006,
     "rumbling": true,
     "oxygenMasks": false,
@@ -196,7 +196,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -208,12 +208,12 @@
     "valence": -0.62,
     "arousal": 0.75
     },
-    "patient_transcript": "Lightning! That spiked me.",
+    "patient_transcript": "flash! That spiked me.",
     "therapist_transcript": "Startle is normal. In for four, out for six with me.",
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": true,
+    "flash": true,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -230,7 +230,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -247,7 +247,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -264,7 +264,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -281,7 +281,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -298,7 +298,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -315,7 +315,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -332,7 +332,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -349,7 +349,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": true,
+    "flash": true,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -366,7 +366,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -383,7 +383,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -400,7 +400,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -417,7 +417,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -434,7 +434,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -451,7 +451,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -468,7 +468,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -485,7 +485,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": true,
+    "flash": true,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -502,7 +502,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -519,7 +519,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -536,7 +536,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -553,7 +553,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -570,7 +570,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -587,7 +587,7 @@
     "unity_state": {
     "exposure": 12.0,
     "rain": 20000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.015,
     "rumbling": true,
     "oxygenMasks": true,
@@ -604,7 +604,7 @@
     "unity_state": {
     "exposure": 11.5,
     "rain": 15000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.01,
     "rumbling": true,
     "oxygenMasks": true,
@@ -621,7 +621,7 @@
     "unity_state": {
     "exposure": 11.5,
     "rain": 15000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.01,
     "rumbling": true,
     "oxygenMasks": true,
@@ -638,7 +638,7 @@
     "unity_state": {
     "exposure": 11.5,
     "rain": 15000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.01,
     "rumbling": true,
     "oxygenMasks": true,
@@ -655,7 +655,7 @@
     "unity_state": {
     "exposure": 11.5,
     "rain": 15000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.01,
     "rumbling": true,
     "oxygenMasks": true,
@@ -672,7 +672,7 @@
     "unity_state": {
     "exposure": 11.5,
     "rain": 15000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.01,
     "rumbling": true,
     "oxygenMasks": true,
@@ -689,7 +689,7 @@
     "unity_state": {
     "exposure": 11.5,
     "rain": 15000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.01,
     "rumbling": true,
     "oxygenMasks": true,
@@ -706,7 +706,7 @@
     "unity_state": {
     "exposure": 10.0,
     "rain": 8000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.006,
     "rumbling": true,
     "oxygenMasks": false,
@@ -723,7 +723,7 @@
     "unity_state": {
     "exposure": 10.0,
     "rain": 8000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.006,
     "rumbling": true,
     "oxygenMasks": false,
@@ -740,7 +740,7 @@
     "unity_state": {
     "exposure": 10.0,
     "rain": 8000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.006,
     "rumbling": true,
     "oxygenMasks": false,
@@ -757,7 +757,7 @@
     "unity_state": {
     "exposure": 10.0,
     "rain": 8000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.006,
     "rumbling": true,
     "oxygenMasks": false,
@@ -774,7 +774,7 @@
     "unity_state": {
     "exposure": 10.0,
     "rain": 8000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.006,
     "rumbling": true,
     "oxygenMasks": false,
@@ -791,7 +791,7 @@
     "unity_state": {
     "exposure": 10.0,
     "rain": 8000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.006,
     "rumbling": true,
     "oxygenMasks": false,
@@ -808,7 +808,7 @@
     "unity_state": {
     "exposure": 10.0,
     "rain": 8000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.006,
     "rumbling": true,
     "oxygenMasks": false,
@@ -825,7 +825,7 @@
     "unity_state": {
     "exposure": 10.0,
     "rain": 8000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.006,
     "rumbling": true,
     "oxygenMasks": false,
@@ -842,7 +842,7 @@
     "unity_state": {
     "exposure": 10.0,
     "rain": 8000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.006,
     "rumbling": true,
     "oxygenMasks": false,
@@ -859,7 +859,7 @@
     "unity_state": {
     "exposure": 10.0,
     "rain": 8000,
-    "lightning": false,
+    "flash": false,
     "turbolence": 0.006,
     "rumbling": true,
     "oxygenMasks": false,
