@@ -194,6 +194,8 @@ class Agent:
         print(f"Session data: {session_data}")
         for step, state in session_data.items():
             print(f"Step: {step}, State: {state}")
+            slider_heights = calcola_altezze_slider((state.get("emotional_state")["valence"], state.get("emotional_state")["arousal"]))
+            self.send_to_unity('sliders', slider_heights)
             for key, value in state['unity_state'].items():
                 if getattr(unity_state, key) != value:
                     self.send_to_unity(key, value)
