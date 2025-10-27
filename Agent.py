@@ -1,6 +1,8 @@
 import json
 import socket
 import time
+import math
+
 from dataclasses import asdict
 from websocket import create_connection, WebSocketConnectionClosedException
 from Session import Session, Session1
@@ -164,8 +166,11 @@ class Agent:
                     (data.get("emotional_state")["valence"], data.get("emotional_state")["arousal"]),
                     self.step
                 )
+                slider_heights = calcola_altezze_slider((data.get("emotional_state")["valence"], data.get("emotional_state")["arousal"]))
+                message['sliders'] = slider_heights
                 print("mapped message:", message)
                 self.save_state(data, state)
+
 
                 for key, value in message.items():
                     self.send_to_unity(key, value)
@@ -190,6 +195,28 @@ class Agent:
                     self.send_to_unity(key, value)
                     setattr(unity_state, key, value)
             time.sleep(1) 
+
+
+def calcola_altezze_slider(punto):
+    
+    riferimenti = {
+        'ANGER': (-0.9, 0.2),
+        'FEAR': (-0.4,0.78333),
+        'CALM': (0.7233399911623,-0.6730319357494)
+    }
+    
+    distanze = {}
+    for emozione, ref_punto in riferimenti.items():
+        distanza = math.sqrt((punto[0] - ref_punto[0])**2 + (punto[1] - ref_punto[1])**2)
+        distanze[emozione] = distanza
+    
+    
+    altezze = {}
+    for emozione, distanza in distanze.items():
+        altezza_percentuale = max(0, min(100, (1 - distanza / 2) * 100))
+        altezze[emozione] = round(altezza_percentuale, 2)
+    
+    return altezze
 
 if __name__ == "__main__":
     session_id = "session1"
