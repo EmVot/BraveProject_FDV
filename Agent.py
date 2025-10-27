@@ -18,6 +18,7 @@ END_SIGNAL = "end"
 SLIDER_PARAMS = {"exposure", "rain", "turbolence"}
 TOGGLE_OR_OPTION_PARAMS = {"flash", "rumbling", "oxygenMasks", "voices"}
 
+
 class Agent:
     def __init__(self):
         # --- PREPARA code/variabili PRIMA di connetterti ---
@@ -137,7 +138,10 @@ class Agent:
                 pass
             return {"type": "command", "action": "update_param", "param": param, "value": value}
         # Toggle/Option → toggle_param con bool/string
-        return {"type": "command", "action": "toggle_param", "param": param, "value": value}
+        elif param in TOGGLE_OR_OPTION_PARAMS:
+            return {"type": "command", "action": "toggle_param", "param": param, "value": value}
+        else:
+            return {"type": "command", "action": "update_sliders", "param": param, "value": value}
 
     def send_to_unity(self, param, value):
         payload = self._build_command(param, value)
