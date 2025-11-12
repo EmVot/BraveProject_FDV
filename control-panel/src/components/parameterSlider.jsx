@@ -5,7 +5,7 @@ function ParameterSlider({
   param,
   min,
   max,
-  step = 1,
+  step,
   value,
   disabled = false,
   onChange,

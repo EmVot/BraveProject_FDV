@@ -6,7 +6,7 @@ import { sendMessage } from "./websocket";
 import "./App.css";
 
 function App() {
-  const [darkness, setDarkness] = useState(10.5);
+  const [darkness, setDarkness] = useState(9);
   const [rain, setRain] = useState(0);
   const [turbolence, setTurbolence] = useState(0);
 
