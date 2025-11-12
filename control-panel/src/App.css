@@ -136,3 +136,17 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* stile “vendor-free” */
+.control input[type="range"] {
+  accent-color: rgba(116, 12, 160, 0.9);      /* colore del cursore + parte riempita */
+  block-size: 1.75rem;        /* altezza complessiva del controllo */
+  background: transparent;    /* non influisce sulla track nativa */
+  cursor: pointer;
+}
+
+/* stato disabilitato (coerente col tuo inline style) */
+.control.disabled input[type="range"] {
+  accent-color: #a3a3a3;
+  cursor: not-allowed;
+}
