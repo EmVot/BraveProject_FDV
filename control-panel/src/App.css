@@ -81,12 +81,11 @@
   white-space: nowrap;
 }
 
-/* Switch container - più sottile */
 .switch {
   position: relative;
   display: inline-block;
   width: 50px;
-  height: 20px; /* ⬅️ da 28px a 20px */
+  height: 20px;
 }
 
 .switch input {
@@ -96,7 +95,6 @@
   position: absolute;
 }
 
-/* Slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -106,40 +104,49 @@
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.485);
   transition: 0.4s;
-  border-radius: 20px; /* ⬅️ mantenere bordi rotondi */
+  border-radius: 20px; 
 }
 
-/* Cerchio interno */
 .slider:before {
   position: absolute;
   content: "";
-  height: 14px;     /* ⬅️ da 20px a 14px */
-  width: 14px;      /* idem */
-  left: 3px;        /* centrato nel nuovo spessore */
+  height: 14px;   
+  width: 14px;     
+  left: 3px;        
   bottom: 3px;
   background-color: white;
   transition: 0.4s;
   border-radius: 50%;
 }
 
-/* Quando è attivo */
 .switch input:checked + .slider {
   background-color: rgba(82, 7, 114, 0.9);
 }
 
-/* Sposta il cerchio */
 .switch input:checked + .slider:before {
-  transform: translateX(28px); /* aggiustato per nuova larghezza */
+  transform: translateX(28px); 
 }
 
-/* disabilitazione generica del controllo */
 .control.disabled {
   opacity: 0.5;
-  pointer-events: none; /* blocca interazioni sul wrapper */
+  pointer-events: none; 
 }
 
-/* bottoni opzione disabilitati */
 .option-button.disabled {
   opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* stile “vendor-free” */
+.control input[type="range"] {
+  accent-color: rgba(116, 12, 160, 0.9);      /* colore del cursore + parte riempita */
+  block-size: 1.75rem;        /* altezza complessiva del controllo */
+  background: transparent;    /* non influisce sulla track nativa */
+  cursor: pointer;
+}
+
+/* stato disabilitato (coerente col tuo inline style) */
+.control.disabled input[type="range"] {
+  accent-color: #a3a3a3;
   cursor: not-allowed;
 }

@@ -5,9 +5,9 @@ function ToggleSwitch({
   param,
   onChange,
   disabled = false,
-  momentary = false,      // se true: invia solo ON e poi torna OFF da solo
-  autoResetDelay = 300,   // ms prima dell'auto-reset
-  onAutoReset,            // callback opzionale: avvisa il parent che è tornato OFF
+  momentary = false,      
+  autoResetDelay = 300,  
+  onAutoReset,            
 }) {
   const [checked, setChecked] = useState(false);
 
@@ -15,19 +15,16 @@ function ToggleSwitch({
     if (disabled) return;
 
     if (!checked) {
-      // Passaggio OFF -> ON
       setChecked(true);
       onChange?.(param, true);
 
       if (momentary) {
         setTimeout(() => {
           setChecked(false);
-          // Non inviamo OFF al backend
-          onAutoReset?.(param); // avvisa il parent per resettare eventuali stati esterni
+          onAutoReset?.(param);
         }, autoResetDelay);
       }
     } else {
-      // Passaggio ON -> OFF (solo se NON momentary)
       if (!momentary) {
         setChecked(false);
         onChange?.(param, false);

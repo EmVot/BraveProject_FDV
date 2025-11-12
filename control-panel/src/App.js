@@ -6,18 +6,15 @@ import { sendMessage } from "./websocket";
 import "./App.css";
 
 function App() {
-  // stati valori
   const [darkness, setDarkness] = useState(10.5);
   const [rain, setRain] = useState(0);
   const [turbolence, setTurbolence] = useState(0);
 
-  // stati toggle che servono per i blocchi cursore
   const [lightningOn, setLightningOn] = useState(false);
   const [masksOn, setMasksOn] = useState(false);
 
-  const [forcedVoice, setForcedVoice] = useState("calm"); // per forzare Calm quando serve
+  const [forcedVoice, setForcedVoice] = useState("calm"); 
 
-  // vincoli di abilitazione (come prima)
   const allDisabled = darkness < 10.5;
 
   const rainEnabled      = !allDisabled && darkness > 10.4;
@@ -29,7 +26,6 @@ function App() {
   const masksEnabled     = turbEnabled && turbolence > 0.0045;
   const panicEnabled     = turbEnabled && turbolence > 0.0045;
 
-  // forza Calm se darkness < 10.5
   useEffect(() => {
     if (darkness < 10.5) {
       setForcedVoice("calm");
@@ -63,7 +59,7 @@ function App() {
           step={0.1}
           value={darkness}
           onChange={(p, v) => {
-            // 🔒 blocco: se Rain > 10000, non scendere sotto 10.5
+            // se Rain > 10000, non scende sotto 10.5
             const minClamp = (rain > 10000) ? 10.5 : 9;
             const clamped = v < minClamp ? minClamp : v;
 
@@ -82,7 +78,7 @@ function App() {
           value={rain}
           disabled={!rainEnabled}
           onChange={(p, v) => {
-            // 🔒 blocco: se Lightning è ON, non scendere sotto 10000
+            // se Lightning è ON, non scende sotto 10000
             const minClamp = lightningOn ? 10000 : 0;
             const clamped = v < minClamp ? minClamp : v;
 
@@ -102,12 +98,11 @@ function App() {
           if (!lightningEnabled) return;
           if (v) {
             // invia SOLO ON
-            setLightningOn(true); // per i tuoi clamp UI
+            setLightningOn(true); 
             sendMessage({ type: "command", action: "toggle_param", param: p, value: true });
           }
         }}
         onAutoReset={() => {
-          // torna OFF anche nello stato del parent, così il clamp del cursore non resta bloccato
           setLightningOn(false);
         }}
       />
@@ -124,7 +119,7 @@ function App() {
           value={turbolence}
           disabled={!turbEnabled}
           onChange={(p, v) => {
-            // 🔒 blocco: se Masks è ON, non scendere sotto 0.005
+            // se Masks è ON, non scende sotto 0.005
             const minClamp = masksOn ? 0.005 : 0;
             const clamped = v < minClamp ? minClamp : v;
 
@@ -147,7 +142,7 @@ function App() {
           param="oxygenMasks"
           disabled={!masksEnabled}
           onChange={(p, v) => {
-            setMasksOn(v); // teniamo lo stato per il blocco di Turbolence
+            setMasksOn(v); 
             safeSendToggle(masksEnabled, p, v);
           }}
         />
