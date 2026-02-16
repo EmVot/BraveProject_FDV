@@ -421,7 +421,8 @@ class RusselPlotAnimator:
                                 trail_mode: TrailMode = TrailMode.FIXED_LENGTH,
                                 trail_length: int = 50,
                                 output_path: str = "russel_plot_video.mp4",
-                                temp_dir: str = "temp_frames"
+                                temp_dir: str = "temp_frames",
+                                trail_color: str = '#eb4034'
                                 ) -> str:
         """
         Crea un video generando frame individuali e combinandoli con OpenCV.
@@ -461,7 +462,7 @@ class RusselPlotAnimator:
                 if frame_idx > 0:
                     trail_x = x_coords[:frame_idx+1]
                     trail_y = y_coords[:frame_idx+1]
-                    self.ax.plot(trail_x, trail_y, '#ba0be0', linewidth=4, label='Trail')
+                    self.ax.plot(trail_x, trail_y, trail_color, linewidth=4, label='Trail')
             
             elif trail_mode == TrailMode.FIXED_LENGTH:
                 # Modalità 2: Scia di lunghezza fissa
@@ -473,20 +474,21 @@ class RusselPlotAnimator:
             
             
             # Punto corrente
-            if current_x == x_waypoints[idx//15] and current_y == y_waypoints[idx//15]:
+            if idx//15 < len(x_waypoints):
+                if current_x == x_waypoints[idx//15] and current_y == y_waypoints[idx//15]:
+                    
+                    self.ax.scatter(current_x, current_y, color=self.waypoints[idx//15]['color'],
+                                s=60, edgecolors='black', zorder=5)
+                    self.ax.text(current_x+label_offset, current_y+label_offset, self.waypoints[idx//15]['label'], 
+                        fontsize=18, color='black', weight='bold',
+                        ha='center', va='center'
+                        )
+                    idx += 1
+                    
+                    
+                else:
+                    self.ax.plot(current_x, current_y, 'gray', markersize=10, label='Current Position')
                 
-                self.ax.scatter(current_x, current_y, color=self.waypoints[idx//15]['color'],
-                              s=60, edgecolors='black', zorder=5)
-                self.ax.text(current_x+label_offset, current_y+label_offset, self.waypoints[idx//15]['label'], 
-                    fontsize=18, color='black', weight='bold',
-                    ha='center', va='center'
-                    )
-                idx += 1
-                
-                
-            else:
-                self.ax.plot(current_x, current_y, 'gray', markersize=10, label='Current Position')
-            
             # wp_x = [wp[0] for wp in self.waypoints]
             # wp_y = [wp[1] for wp in self.waypoints]
             # self.ax.plot(wp_x, wp_y, 'ks', markersize=8, alpha=0.5, label='Waypoints')
